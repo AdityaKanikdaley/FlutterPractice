@@ -89,18 +89,19 @@ class _State extends State<MyApp> {
 
   _buildListItem(String s, String t, String u) {
     return  Padding(
-      padding: const EdgeInsets.only(left: 4.0, right: 20),
+      padding: const EdgeInsets.only(left: 4.0, right: 14),
       child: Container(
           height: 150.0,
           width: 100.0,
-          color: const Color.fromARGB(12, 243, 6, 6),
+          // decoration: BoxDecoration(color: Colors.white,),
+          // color: const Color.fromARGB(12, 243, 6, 6),
           child: Container(
             decoration: BoxDecoration(
               border: Border.all(color: Colors.grey, width: 3),
               color: Colors.white,
               borderRadius: BorderRadius.all(Radius.circular(20.0),)),
               child: Padding(
-                  padding: const EdgeInsets.fromLTRB(0,10,0,0),
+                  padding: const EdgeInsets.fromLTRB(0,8,0,0),
                   child: Column(children: <Widget>[
                       Text(s, style: TextStyle(color: Colors.grey)),
                       SizedBox(height: 75.0),
