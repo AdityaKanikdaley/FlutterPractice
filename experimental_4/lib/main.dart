@@ -87,22 +87,23 @@ class _State extends State<MyApp> {
                         ),
 
                         // container of text
-                        // new Container(
-                        //     width: 210,
-                        //     child: new Column(
-                        //         crossAxisAlignment: CrossAxisAlignment.start,
-                        //         children: <Widget>[
-                        //           // adding click events
-                        //           new InkWell(
-                        //               child: new Text("hiii",
-                        //                   style: TextStyle(
-                        //                       fontSize: 22.0,
-                        //                       color: Colors.white),
-                        //                   maxLines: 1),
-                        //               onTap: () {
-                        //                 debugPrint("1st");
-                        //               })
-                        //         ]))
+                        new Container(
+                            width: 210,
+                            child: new Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  // adding click events
+                                  new InkWell(
+                                      child: new Text("hiii",
+                                          style: TextStyle(
+                                              fontSize: 22.0,
+                                              color: Colors.white),
+                                          maxLines: 1),
+                                      onTap: () {
+                                        debugPrint("1st clicked");
+                                      }),
+                                  new Text("Aditya Kanikdaley"),
+                                ]))
                       ],
                     )))
           ])),
