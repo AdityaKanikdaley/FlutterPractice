@@ -11,28 +11,11 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
-
-  //routing
-  final routes = <String, WidgetBuilder>{
-    creditsClass.tag: (context) => creditsClass(),
-  };
-
   @override
   _State createState() => new _State();
 }
 
-
-class MyItem {
-  bool isExpanded;
-  final String header;
-  final Widget body;
-
-  MyItem(this.isExpanded, this.header, this.body);
-}
-
-
 class _State extends State<MyApp> {
-
 
   @override
   Widget build(BuildContext context) {
