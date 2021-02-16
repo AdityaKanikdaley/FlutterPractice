@@ -22,7 +22,7 @@ Widget industrials(){
           card("assets/hmt.jpg", "HMT", "Defence", "Kolkata", "1775"),
           card("assets/indianrailway.png", "Indian Railways", "Railroads", "New Delhi", "1853"),
           card("assets/infosys.png", "Infosys", "Business Support Services", "Bengaluru", "1981"),
-          Text("Updating more companies soon.......")
+          Text("Updating more companies soon.......\n",  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),)
         ]
     );
 

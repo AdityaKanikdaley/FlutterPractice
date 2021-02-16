@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:indian_companies/categories/industrials.dart';
+import 'package:indian_companies/categories/oil_gas.dart';
 import 'package:indian_companies/expansionTile.dart';
 import 'divider.dart';
 
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
                 scrollDirection: Axis.vertical,
                 children: <Widget>[
                     expansionTile("assets/industrial.jpg", "Industrials", industrials),
+                    expansionTile("assets/oil & gas.png", "Oil & Gas", oil_gas),
 
                 ],
         ),
