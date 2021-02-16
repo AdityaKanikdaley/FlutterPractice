@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class creditsClass extends StatelessWidget {
+class aboutClass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text("this is credits"),
+      child: Text("this is about"),
     );
 
 
