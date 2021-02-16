@@ -12,7 +12,7 @@ Widget expansionTile(String path, String title, Function function){
           ),
         ),
         tilePadding: EdgeInsets.all(10),
-        title: Text(title, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+        title: Text(title, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
         children: <Widget>[
           Container(
             height: 420,

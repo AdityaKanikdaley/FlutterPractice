@@ -4,7 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:indian_companies/categories/industrials.dart';
 import 'package:indian_companies/categories/oil_gas.dart';
 import 'package:indian_companies/expansionTile.dart';
-import 'divider.dart';
+import 'drawer.dart';
 
 void main() {
   runApp(new MaterialApp(
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       ),
 
       drawer: new Drawer(
-        child: divider(context)
+        child: drawer(context)
       ),
       body: new Container(
               child: ListView(

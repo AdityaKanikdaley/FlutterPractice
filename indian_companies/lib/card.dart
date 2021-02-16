@@ -17,10 +17,10 @@ Widget card(String path, String name, String sector, String headquarters, String
             children: <Widget>[
                 new CircleAvatar(
                   radius: 40,
+                  backgroundColor: Colors.transparent,
                   child: Container(
                     child: new Image.asset(path, fit: BoxFit.scaleDown),
-                ),
-                backgroundColor: Colors.transparent,
+                     ),
                  ),
 
                 Container(height: 90,width: 20 ,child: VerticalDivider(color: Colors.black)),
@@ -30,10 +30,10 @@ Widget card(String path, String name, String sector, String headquarters, String
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(name, style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold), maxLines: 1),
-                      new Text(sector),
-                      new Text(headquarters),
-                      new Text(founded),
-                      new Text("Click for details"),
+                      new Text("Sector: " + sector),
+                      new Text("Headquarters: " + headquarters),
+                      new Text("Year founded: " + founded),
+                      new Text("Click for more details", style: TextStyle(color: Colors.blue)),
                     ],
                   ),
                 )
