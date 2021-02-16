@@ -11,7 +11,7 @@ Widget expansionTile(String path, String title, Function function){
         title: Text(title),
         children: <Widget>[
           Container(
-            height: 400,
+            height: 420,
             child: SingleChildScrollView(
               scrollDirection: Axis.vertical,
               child: function()

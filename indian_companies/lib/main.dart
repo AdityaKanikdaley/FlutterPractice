@@ -11,12 +11,7 @@ void main() {
   ));
 }
 
-class MyApp extends StatefulWidget {
-  @override
-  _State createState() => new _State();
-}
-
-class _State extends State<MyApp> {
+class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
