@@ -44,6 +44,7 @@ Widget drawer(BuildContext context){
             IconButton(
               icon: Icon(FontAwesomeIcons.facebook,color: Colors.blue),
               onPressed: () async {
+                debugPrint("facebook pressed");
                 const url = "https://www.facebook.com/profile.php?id=100004353226781";
                 if(await canLaunch(url))
                   await launch(url);
@@ -56,6 +57,7 @@ Widget drawer(BuildContext context){
             IconButton(
               icon: Icon(FontAwesomeIcons.instagram,color: Colors.purpleAccent),
               onPressed: () async {
+                debugPrint("instagram pressed");
                 const url = "https://www.instagram.com/aditya_kanikdaley/";
                 if(await canLaunch(url))
                   await launch(url);
@@ -68,6 +70,7 @@ Widget drawer(BuildContext context){
             IconButton(
               icon: Icon(FontAwesomeIcons.twitter,color: Colors.blue),
               onPressed: () async {
+                debugPrint("twiter pressed");
                 const url = "https://twitter.com/AKanikdaley";
                 if(await canLaunch(url))
                   await launch(url);
@@ -80,6 +83,7 @@ Widget drawer(BuildContext context){
             IconButton(
               icon: Icon(FontAwesomeIcons.linkedin,color: Colors.blue[700]),
               onPressed: () async {
+                debugPrint("linkedin pressed");
                 const url = "https://www.linkedin.com/in/aditya-kanikdaley-471452190/";
                 if(await canLaunch(url))
                   await launch(url);

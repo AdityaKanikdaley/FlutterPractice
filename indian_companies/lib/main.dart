@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:indian_companies/categories/airlines.dart';
+import 'package:indian_companies/categories/banks.dart';
 import 'package:indian_companies/categories/industrials.dart';
 import 'package:indian_companies/categories/oil_gas.dart';
 import 'package:indian_companies/expansionTile.dart';
@@ -35,6 +37,8 @@ class MyApp extends StatelessWidget {
                 children: <Widget>[
                     expansionTile("assets/industrial.jpg", "Industrials", industrials),
                     expansionTile("assets/oil & gas.png", "Oil & Gas", oil_gas),
+                    expansionTile("assets/airlines.png", "Airlines", airlines),
+                    expansionTile("assets/banks.jpg", "Banks", banks),
 
                 ],
         ),
