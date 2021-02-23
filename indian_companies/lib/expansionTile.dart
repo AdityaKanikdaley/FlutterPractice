@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 
-Widget expansionTile(String path, String title, Function function){
+Widget expansionTile(String path, String title, BuildContext context, Function function){
   return
     ExpansionTile(
         leading: CircleAvatar(
@@ -18,7 +18,7 @@ Widget expansionTile(String path, String title, Function function){
             height: 420,
             child: SingleChildScrollView(
               scrollDirection: Axis.vertical,
-              child: function()
+              child: function(context)
             ),
           )
         ]

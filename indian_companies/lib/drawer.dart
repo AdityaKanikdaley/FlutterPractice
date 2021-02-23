@@ -1,3 +1,4 @@
+import 'package:flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -5,20 +6,14 @@ import 'package:indian_companies/about.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 
-final GlobalKey<ScaffoldState> _scaffoldstate = new GlobalKey<ScaffoldState>();
-
-void _showbar(){
-  _scaffoldstate.currentState.showSnackBar(new SnackBar(content: new Text('Cannot open at this moment')));
-}
 
 Widget drawer(BuildContext context){
-  key: _scaffoldstate;
   return
     ListView(children: <Widget>[
       new UserAccountsDrawerHeader(
           accountName: new Text("Aditya Kanikdaley"),
           currentAccountPicture: CircleAvatar(
-              backgroundImage: AssetImage("assets/me.jpg")),
+              backgroundImage: AssetImage("assets/headLogo/me.jpg")),
           accountEmail: new Text("adikanikdaley@gmail.com")),
 
       //about
@@ -49,8 +44,11 @@ Widget drawer(BuildContext context){
                 if(await canLaunch(url))
                   await launch(url);
                 else
-                  throw _showbar;
-              },
+                   Flushbar(
+                      message: "Can't be reached at this moment!",
+                      duration: Duration(seconds: 3),
+                    )..show(context);
+                        },
             ),
 
             //instagram
@@ -62,7 +60,10 @@ Widget drawer(BuildContext context){
                 if(await canLaunch(url))
                   await launch(url);
                 else
-                  throw _showbar;
+                   Flushbar(
+                    message: "Can't be reached at this moment!",
+                    duration: Duration(seconds: 3),
+                  )..show(context);
               },
             ),
 
@@ -75,7 +76,10 @@ Widget drawer(BuildContext context){
                 if(await canLaunch(url))
                   await launch(url);
                 else
-                  throw _showbar;
+                   Flushbar(
+                    message: "Can't be reached at this moment!",
+                    duration: Duration(seconds: 3),
+                  )..show(context);
               },
             ),
 
@@ -88,7 +92,10 @@ Widget drawer(BuildContext context){
                 if(await canLaunch(url))
                   await launch(url);
                 else
-                  throw _showbar;
+                   Flushbar(
+                    message: "Can't be reached at this moment!",
+                    duration: Duration(seconds: 3),
+                  )..show(context);
               },
             ),
           ],

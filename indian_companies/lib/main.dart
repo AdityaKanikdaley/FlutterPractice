@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:indian_companies/categories/airlines.dart';
 import 'package:indian_companies/categories/banks.dart';
+import 'package:indian_companies/categories/buildingMaterials.dart';
 import 'package:indian_companies/categories/industrials.dart';
 import 'package:indian_companies/categories/oil_gas.dart';
 import 'package:indian_companies/expansionTile.dart';
@@ -35,10 +36,11 @@ class MyApp extends StatelessWidget {
               child: ListView(
                 scrollDirection: Axis.vertical,
                 children: <Widget>[
-                    expansionTile("assets/industrial.jpg", "Industrials", industrials),
-                    expansionTile("assets/oil & gas.png", "Oil & Gas", oil_gas),
-                    expansionTile("assets/airlines.png", "Airlines", airlines),
-                    expansionTile("assets/banks.jpg", "Banks", banks),
+                    // expansionTile("assets/headLogo/industrial.jpg", "Industrials", industrials),
+                    // expansionTile("assets/headLogo/oil & gas.png", "Oil & Gas", oil_gas),
+                    expansionTile("assets/headLogo/airlines.png", "Airlines", context, airlines),
+                    expansionTile("assets/headLogo/banks.jpg", "Banks", context, banks),
+                    expansionTile("assets/headLogo/buildingMaterials.jpg", "Building Materials", context, buildingMaterials),
 
                 ],
         ),

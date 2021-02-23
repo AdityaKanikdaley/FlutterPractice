@@ -1,15 +1,28 @@
+import 'package:flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 
-Widget card(String path, String name, String sector, String headquarters, String founded){
+Widget card(BuildContext context,String path, String name, String sector, String headquarters, String founded,String url){
   return new Card(
     elevation: 0.0,
     color: Colors.transparent.withOpacity(0.1),
     margin: EdgeInsets.all(10.0),
     child: new InkWell(
       onTap: () async {
-        debugPrint("card pressed"); },
+        debugPrint("${name} card pressed");
+
+        //flushbar
+        if(await canLaunch(url))
+          await launch(url);
+        else
+          Flushbar(
+            message: "Can't be reached at this moment!",
+            duration: Duration(seconds: 4),
+          )..show(context);
+        },
+
       child: Container(
         padding: EdgeInsets.all(10.0),
         child: new Row(
@@ -24,7 +37,7 @@ Widget card(String path, String name, String sector, String headquarters, String
                  ),
 
                 Container(height: 90,width: 20 ,child: VerticalDivider(color: Colors.black)),
-              
+
                 new Container(
                   child: new Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
