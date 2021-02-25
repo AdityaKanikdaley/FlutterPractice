@@ -20,11 +20,11 @@ class MyApp extends StatelessWidget {
     return new Scaffold(
       appBar: new AppBar(
         title: new Text('Indian Companies'),
-        actions: [
-          IconButton(
-              onPressed: () => debugPrint('searched button clicked'),
-              icon: Icon(Icons.search))
-        ],
+        // actions: [
+        //   IconButton(
+        //       onPressed: () => debugPrint('searched button clicked'),
+        //       icon: Icon(Icons.search))
+        // ],
       ),
 
       drawer: new Drawer(

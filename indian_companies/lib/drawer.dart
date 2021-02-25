@@ -18,16 +18,15 @@ Widget drawer(BuildContext context){
 
       //about
       new ListTile(
-          title: new InkWell(
-            child: Text("About"),
-            onTap: () {
+          leading: new Icon(Icons.info_outline, color: Colors.purple),
+          title: Text("About"),
+          onTap: () {
               debugPrint("about pressed");
               Navigator.push(context, MaterialPageRoute(builder: (context) => aboutClass()
               )
               );
             },
           ),
-          leading: new Icon(Icons.info_outline, color: Colors.purple)),
 
       //contact
       new ExpansionTile(
