@@ -4,8 +4,6 @@ import 'package:flutter/widgets.dart';
 import 'package:indian_companies/categories/airlines.dart';
 import 'package:indian_companies/categories/banks.dart';
 import 'package:indian_companies/categories/buildingMaterials.dart';
-import 'package:indian_companies/categories/industrials.dart';
-import 'package:indian_companies/categories/oil_gas.dart';
 import 'package:indian_companies/expansionTile.dart';
 import 'drawer.dart';
 
