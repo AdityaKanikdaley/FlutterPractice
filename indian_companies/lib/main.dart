@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:indian_companies/categories/airlines.dart';
+import 'package:indian_companies/categories/automobiles.dart';
 import 'package:indian_companies/categories/banks.dart';
+import 'package:indian_companies/categories/broadcast_entertain.dart';
 import 'package:indian_companies/categories/buildingMaterials.dart';
 import 'package:indian_companies/expansionTile.dart';
 import 'drawer.dart';
@@ -39,6 +41,8 @@ class MyApp extends StatelessWidget {
                     expansionTile("assets/headLogo/airlines.png", "Airlines", context, airlines),
                     expansionTile("assets/headLogo/banks.jpg", "Banks", context, banks),
                     expansionTile("assets/headLogo/buildingMaterials.jpg", "Building Materials", context, buildingMaterials),
+                    expansionTile("assets/headLogo/broadcast.png", "Broadcast & Entertainment", context, broadcasting),
+                    expansionTile("assets/headLogo/automobiles.png", "Automobiles", context, automobiles),
 
                 ],
         ),

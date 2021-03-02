@@ -46,7 +46,7 @@ Widget card(BuildContext context,String path, String name, String sector, String
                       new Text("Sector: " + sector),
                       new Text("Headquarters: " + headquarters),
                       new Text("Year founded: " + founded),
-                      new Text("Click for more details", style: TextStyle(color: Colors.blue)),
+                      new Text("Click to visit Website", style: TextStyle(color: Colors.blue)),
                     ],
                   ),
                 )

@@ -14,7 +14,7 @@ Widget airlines(BuildContext context){
           card(context,"assets/airlines/air costa.png", "Air Costa", "Airlines", "Vijayawada", "2013","https://en.wikipedia.org/wiki/Air_Costa"),
           card(context,"assets/airlines/air odisha.png", "Air Odisha", "Airlines", "Bhubaneswar", "2012","https://www.alternativeairlines.com/air-odisha"),
           card(context,"assets/airlines/jetlite.png", "JetLite", "Airlines", "Mumbai", "1991","https://en.wikipedia.org/wiki/JetLite"),
-          card(context,"assets/airlines/pawan hans.png", "Pawan Hans", "Airlines", "Noida", "1985","https://www.pawanhans.co.in/"),
+          // card(context,"assets/airlines/pawan hans.png", "Pawan Hans", "Airlines", "Noida", "1985","https://www.pawanhans.co.in/"),
           Text("Updating more companies soon.......",  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),)
         ]
     );
