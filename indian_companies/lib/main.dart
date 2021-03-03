@@ -6,6 +6,9 @@ import 'package:indian_companies/categories/automobiles.dart';
 import 'package:indian_companies/categories/banks.dart';
 import 'package:indian_companies/categories/broadcast_entertain.dart';
 import 'package:indian_companies/categories/buildingMaterials.dart';
+import 'package:indian_companies/categories/exploration_production.dart';
+import 'package:indian_companies/categories/food.dart';
+import 'package:indian_companies/categories/healthcare.dart';
 import 'package:indian_companies/expansionTile.dart';
 import 'drawer.dart';
 
@@ -36,13 +39,15 @@ class MyApp extends StatelessWidget {
               child: ListView(
                 scrollDirection: Axis.vertical,
                 children: <Widget>[
-                    // expansionTile("assets/headLogo/industrial.jpg", "Industrials", industrials),
-                    // expansionTile("assets/headLogo/oil & gas.png", "Oil & Gas", oil_gas),
                     expansionTile("assets/headLogo/airlines.png", "Airlines", context, airlines),
                     expansionTile("assets/headLogo/banks.jpg", "Banks", context, banks),
                     expansionTile("assets/headLogo/buildingMaterials.jpg", "Building Materials", context, buildingMaterials),
                     expansionTile("assets/headLogo/broadcast.png", "Broadcast & Entertainment", context, broadcasting),
                     expansionTile("assets/headLogo/automobiles.png", "Automobiles", context, automobiles),
+                    expansionTile("assets/headLogo/exploration.png", "Exploration & Productions", context, exploration),
+                    expansionTile("assets/headLogo/food.jpg", "Food Products", context, food),
+                    expansionTile("assets/headLogo/healthcare.jpg", "Healthcare Providers", context, healthCare),
+
 
                 ],
         ),
