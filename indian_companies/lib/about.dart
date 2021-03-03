@@ -28,7 +28,7 @@ class aboutClass extends StatelessWidget {
           direction: Axis.horizontal,
           children: <Widget>[
             Text("This app is mainly made to show that India is becoming much 'self-reliant India' or 'self-sufficient'. \n"
-                "This term is used by the Prime Minister of India Narendra Modi in relation to economic development in country.\n\n",
+                "This term was used by the Prime Minister of India Narendra Modi in relation to economic development in country.\n",
               style: TextStyle(fontSize: 16, color: Color(0xFFe80909)),),
 
             Text("The five pillars of ‘Atmanirbhar Bharat’ he stated as economy, infrastructure, technology, vibrant demography"
@@ -37,7 +37,7 @@ class aboutClass extends StatelessWidget {
             Text("Therefore, be Proud to be an INDIAN\n\n",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17, color: Colors.indigoAccent), ),
 
-            Text("Development of this app is been done by Aditya Kanikdaley,\nFor any queries mail me on:",
+            Text("Development of this app is been done by: \nAditya Kanikdaley,\nFor any queries and suggestions, mail me on:",
               style: TextStyle(fontSize: 14, color: Color(0xFFac07b5)),),
 
             Text("adikanikdaley@gmail.com\n\n", style: TextStyle(color: Colors.lightBlue),),
