@@ -9,6 +9,9 @@ import 'package:indian_companies/categories/buildingMaterials.dart';
 import 'package:indian_companies/categories/exploration_production.dart';
 import 'package:indian_companies/categories/food.dart';
 import 'package:indian_companies/categories/healthcare.dart';
+import 'package:indian_companies/categories/shipbuilding.dart';
+import 'package:indian_companies/categories/specialty_chemicals.dart';
+import 'package:indian_companies/categories/tyres.dart';
 import 'package:indian_companies/expansionTile.dart';
 import 'drawer.dart';
 
@@ -47,6 +50,9 @@ class MyApp extends StatelessWidget {
                     expansionTile("assets/headLogo/exploration.png", "Exploration & Productions", context, exploration),
                     expansionTile("assets/headLogo/food.jpg", "Food Products", context, food),
                     expansionTile("assets/headLogo/healthcare.jpg", "Healthcare Providers", context, healthCare),
+                    expansionTile("assets/headLogo/s_chemicals.jpg", "Specialty Chemicals", context, s_Chemicals),
+                    expansionTile("assets/headLogo/tyres.jpg", "Tyres", context, tyres),
+                    expansionTile("assets/headLogo/shipyard.jpg", "Shipbuilding", context, shipbuilding),
 
 
                 ],
