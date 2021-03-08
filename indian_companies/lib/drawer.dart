@@ -11,10 +11,11 @@ Widget drawer(BuildContext context){
   return
     ListView(children: <Widget>[
       new UserAccountsDrawerHeader(
-          accountName: new Text("Aditya Kanikdaley"),
+          accountName: new Text("Made by Aditya Kanikdaley"),
           currentAccountPicture: CircleAvatar(
-              backgroundImage: AssetImage("assets/headLogo/me.jpg")),
-          accountEmail: new Text("adikanikdaley@gmail.com")),
+              backgroundImage: AssetImage("assets/headLogo/flag_india.png")),
+          accountEmail: new Text("Developed in INDIA")
+      ),
 
       //about
       new ListTile(

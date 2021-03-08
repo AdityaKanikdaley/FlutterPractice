@@ -7,7 +7,7 @@ Widget airlines(BuildContext context){
         children: <Widget>[
           card(context,"assets/airlines/air india.png", "Air India", "Airlines", "New Delhi", "1932","https://bookme.airindia.in/AirIndiaB2C/Booking/Search/"),
           card(context,"assets/airlines/deccan air.png", "Deccan Charters", "Airlines", "Bengaluru", "1997","http://www.deccanair.com/index-2.html"),
-          card(context,"assets/airlines/goAir airlines.png", "GoAir Airlines", "Airlines", "Mumbai", "2005","http://www.deccanair.com/index-2.html"),
+          card(context,"assets/airlines/goAir airlines.png", "GoAir Airlines", "Airlines", "Mumbai", "2005","https://www.goair.in/"),
           card(context,"assets/airlines/indigo.png", "IndiGo", "Airlines", "Gurugram", "2006","https://www.goindigo.in/"),
           card(context,"assets/airlines/SpiceJet.png", "SpiceJet", "Airlines", "Gurugram", "2004","https://www.spicejet.com/"),
           card(context,"assets/airlines/jet airways.png", "Jet Airways", "Airlines", "Mumbai", "1992","http://www.jetairways.com/insolvencyproceedings/"),
