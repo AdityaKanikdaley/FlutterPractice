@@ -41,6 +41,13 @@ class MyApp extends StatelessWidget {
         child: drawer(context)
       ),
       body: new Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
+            colors: [Colors.blue,Colors.greenAccent, Colors.orangeAccent]
+          )
+        ),
               child: ListView(
                 scrollDirection: Axis.vertical,
                 children: <Widget>[

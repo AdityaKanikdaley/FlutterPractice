@@ -6,8 +6,8 @@ import 'package:url_launcher/url_launcher.dart';
 
 Widget card(BuildContext context,String path, String name, String sector, String headquarters, String founded,String url){
   return new Card(
-    elevation: 0.0,
-    color: Colors.transparent.withOpacity(0.1),
+    elevation: 0.5,
+    color: Colors.white.withOpacity(0.45),
     margin: EdgeInsets.all(10.0),
     child: new InkWell(
       onTap: () async {

@@ -9,7 +9,7 @@ Widget shipbuilding(BuildContext context){
           card(context,"assets/shipbuilding/cochin shipyard limited.png", "Cochin Shipyard Ltd.", "Ship building", "Kochi", "1972","https://cochinshipyard.com/"),
           card(context,"assets/shipbuilding/Goa shipyard.png", "Goa Shipyard", "Ship building", "Goa", "1957","https://goashipyard.in/"),
           card(context,"assets/shipbuilding/hindustan shipyard.webp", "Hindustan Shipyard", "Ship building", "Visakhapatnam", "1941","https://www.hslvizag.in/"),
-          card(context,"assets/shipbuilding/mazagon dock shipyard.png", "Mazagon Dock Shipbuilders", "Ship building", "Mumbai", "1934","https://mazagondock.in/"),
+          card(context,"assets/shipbuilding/mazagon dock shipyard.png", "Mazagon Shipbuilders", "Ship building", "Mumbai", "1934","https://mazagondock.in/"),
           Text("Updating more companies soon.......",  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),)
         ]
     );

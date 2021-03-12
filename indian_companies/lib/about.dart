@@ -1,10 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:flushbar/flushbar.dart';
+import 'dart:async';
 import 'package:url_launcher/url_launcher.dart';
 
 class aboutClass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
+    void _launch(String urlString) async {
+       if(await canLaunch(urlString)){
+         await launch(urlString);
+       }
+       else {
+         throw "Could not open URL";
+       }
+    }
+
+
+    void _mail(){
+      _launch('mailto:adikanikdaley@gmail.com');
+    }
+
+
     final me = Hero(
         tag: "hero",
         child: Padding(
@@ -33,14 +50,17 @@ class aboutClass extends StatelessWidget {
 
             Text("The five pillars of ‘Atmanirbhar Bharat’ he stated as economy, infrastructure, technology, vibrant demography"
                 " and demand and asked the nation of 1.3 billion people diligently to be vocal for local, PM said.\n\n",
-              style: TextStyle(fontSize: 16, color: Color(0xFFe32222)),),
+              style: TextStyle(fontSize: 15, color: Color(0xFFe32222)),),
             Text("Therefore, be Proud to be an INDIAN\n\n",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17, color: Colors.indigoAccent), ),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Colors.indigoAccent), ),
 
             Text("Development of this app is been done by: \nAditya Kanikdaley,\nFor any queries and suggestions, mail me on:",
-              style: TextStyle(fontSize: 14, color: Color(0xFFac07b5)),),
+              style: TextStyle(fontSize: 13, color: Color(0xFFac07b5)),),
 
-            Text("adikanikdaley@gmail.com\n\n", style: TextStyle(color: Colors.lightBlue),),
+
+            InkWell(
+              onTap: _mail,
+              child: Text("adikanikdaley@gmail.com\n\n", style: TextStyle(color: Colors.blue, letterSpacing: 1, fontSize: 12))),
 
             Align(
               alignment: Alignment.bottomRight,
@@ -65,18 +85,30 @@ class aboutClass extends StatelessWidget {
     );
 
     return new Scaffold(
-        appBar: new AppBar(
-          title: new Text('Name here'),
-        ),
+        // appBar: new AppBar(
+        //   // title: new Text('Name here'),
+        //   backgroundColor: Colors.blue,
+        //   elevation: 3,
+        //   // foregroundColor: Colors.transparent,
+        // ),
         body:
-        Center(
-          child: ListView(
-            shrinkWrap: true,
-            padding: EdgeInsets.only(left: 24.0, right: 24.0),
-            children: <Widget>[
-              me,
-              about_me
-            ],
+        Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  colors: [Colors.blue,Colors.greenAccent, Colors.orangeAccent]
+              )
+          ),
+          child: Center(
+            child: ListView(
+              shrinkWrap: true,
+              padding: EdgeInsets.only(left: 24.0, right: 24.0),
+              children: <Widget>[
+                me,
+                about_me
+              ],
+            ),
           ),
         )
     );
