@@ -56,19 +56,20 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
      - assets/
+     - assets/headLogo/
      - assets/airlines/
      - assets/automobiles/
      - assets/banks/
      - assets/broadcasting/
      - assets/buildingMaterials/
+     - assets/Consumer electronics/
      - assets/exploration_production/
      - assets/food/
      - assets/healthcare_providers/
      - assets/shipbuilding/
      - assets/specialty_Chemicals/
-     - assets/headLogo/
+     - assets/telecommunications/
      - assets/tires/
-     - assets/shipbuilding/
 
   #   - images/a_dot_ham.jpeg
 

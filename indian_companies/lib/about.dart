@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flushbar/flushbar.dart';
-import 'dart:async';
 import 'package:url_launcher/url_launcher.dart';
 
 class aboutClass extends StatelessWidget {
@@ -49,14 +48,16 @@ class aboutClass extends StatelessWidget {
               style: TextStyle(fontSize: 16, color: Color(0xFFe80909)),),
 
             Text("The five pillars of ‘Atmanirbhar Bharat’ he stated as economy, infrastructure, technology, vibrant demography"
-                " and demand and asked the nation of 1.3 billion people diligently to be vocal for local, PM said.\n\n",
+                " and demand and asked the nation of 1.3 billion people diligently to be vocal for local, PM said.\n",
               style: TextStyle(fontSize: 15, color: Color(0xFFe32222)),),
-            Text("Therefore, be Proud to be an INDIAN\n\n",
+            Text("Therefore, be Proud to be an INDIAN\n",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Colors.indigoAccent), ),
+
+            Text("This app can also be used as a \"SHORTCUT MANAGER\" to visit the Company's Website\n",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12, color: Colors.indigoAccent), ),
 
             Text("Development of this app is been done by: \nAditya Kanikdaley,\nFor any queries and suggestions, mail me on:",
               style: TextStyle(fontSize: 13, color: Color(0xFFac07b5)),),
-
 
             InkWell(
               onTap: _mail,
@@ -64,6 +65,7 @@ class aboutClass extends StatelessWidget {
 
             Align(
               alignment: Alignment.bottomRight,
+              // ignore: deprecated_member_use
               child: RaisedButton(
                 color: Colors.redAccent,
                 onPressed: () async {
