@@ -1,95 +1,136 @@
 import 'package:flutter/material.dart';
 
-class ExpansionTileSample extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('ExpansionTile'),
-        ),
-        body: ListView.builder(
-          itemBuilder: (BuildContext context, int index) =>
-              EntryItem(data[index]),
-          itemCount: data.length,
-        ),
-      ),
-    );
-  }
-}
-
-// One entry in the multilevel list displayed by this app.
-class Entry {
-  Entry(this.title, [this.children = const <Entry>[]]);
-
-  final String title;
-  final List<Entry> children;
-}
-
-// The entire multilevel list displayed by this app.
-final List<Entry> data = <Entry>[
-  Entry(
-    'Chapter A',
-    <Entry>[
-      Entry(
-        'Section A0',
-        <Entry>[
-          Entry('Item A0.1'),
-          Entry('Item A0.2'),
-          Entry('Item A0.3'),
-        ],
-      ),
-      Entry('Section A1'),
-      Entry('Section A2'),
-    ],
-  ),
-  Entry(
-    'Chapter B',
-    <Entry>[
-      Entry('Section B0'),
-      Entry('Section B1'),
-    ],
-  ),
-  Entry(
-    'Chapter C',
-    <Entry>[
-      Entry('Section C0'),
-      Entry('Section C1'),
-      Entry(
-        'Section C2',
-        <Entry>[
-          Entry('Item C2.0'),
-          Entry('Item C2.1'),
-          Entry('Item C2.2'),
-          Entry('Item C2.3'),
-        ],
-      ),
-    ],
-  ),
-];
-
-// Displays one Entry. If the entry has children then it's displayed
-// with an ExpansionTile.
-class EntryItem extends StatelessWidget {
-  const EntryItem(this.entry);
-
-  final Entry entry;
-
-  Widget _buildTiles(Entry root) {
-    if (root.children.isEmpty) return ListTile(title: Text(root.title));
-    return ExpansionTile(
-      key: PageStorageKey<Entry>(root),
-      title: Text(root.title),
-      children: root.children.map(_buildTiles).toList(),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return _buildTiles(entry);
-  }
-}
-
 void main() {
-  runApp(ExpansionTileSample());
+  runApp(new MaterialApp(
+    home: new MyApp(),
+  ));
 }
+
+class MyApp extends StatefulWidget {
+  @override
+  _State createState() => new _State();
+}
+
+class _State extends State<MyApp> {
+
+  List<bool> _states = List();
+  @override
+  void initState() {
+    super.initState();
+    _states.addAll([false, false, false, false, false]);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return
+      Scaffold(
+        body: ListView(
+          children: <Widget>[
+            ExpansionPanelList(
+              expansionCallback: (int index, bool value) {
+                setState(() {
+                  for (int i = 0; i < _states.length; i++) {
+                    if (i != index) {
+                      _states[i] = false;
+                    }
+                  }
+                  _states[index] = !_states[index];
+                });
+              },
+              children: [
+                ExpansionPanel(
+                  isExpanded: _states[0],
+                  headerBuilder: (BuildContext context, bool isExpanded) =>
+                      ListTile(
+                        leading: Icon(Icons.launch),
+                        title: Text("text"),
+                      ),
+                  body: ListTile(
+                    leading: SizedBox(),
+                    title: Text("text 2"),
+                  ),
+                ),
+                ExpansionPanel(
+                  isExpanded: _states[1],
+                  headerBuilder: (BuildContext context, bool isExpanded) =>
+                      ListTile(
+                        leading: Icon(Icons.launch),
+                        title: Text("text"),
+                      ),
+                  body: Column(
+                    children: <Widget>[
+                      ListTile(
+                        leading: SizedBox(),
+                        title: Text("Text 1"),
+                      ),
+                      ListTile(
+                        leading: SizedBox(),
+                        title: Text("text"),
+                      ),
+                      ListTile(
+                        leading: SizedBox(),
+                        title: Text("textCode"),
+                      ),
+                      ListTile(
+                        leading: SizedBox(),
+                        title: Text("Text"),
+                      ),
+                    ],
+                  ),
+                ),
+                ExpansionPanel(
+                  isExpanded: _states[2],
+                  headerBuilder: (BuildContext context, bool isExpanded) =>
+                      ListTile(
+                        leading: Icon(Icons.launch),
+                        title: Text("Text"),
+                      ),
+                  body: Column(
+                    children: <Widget>[
+                      ListTile(
+                        leading: SizedBox(),
+                        title: Text("Text"),
+                      )
+                    ],
+                  ),
+                ),
+                ExpansionPanel(
+                  isExpanded: _states[3],
+                  headerBuilder: (BuildContext context, bool isExpanded) =>
+                      ListTile(
+                        leading: Icon(Icons.launch),
+                        title: Text("Another"),
+                      ),
+                  body: Column(
+                    children: <Widget>[
+                      ListTile(
+                        leading: SizedBox(),
+                        title: Text("Text"),
+                      )
+                    ],
+                  ),
+                ),
+                ExpansionPanel(
+                  isExpanded: _states[4],
+                  headerBuilder: (BuildContext context, bool isExpanded) =>
+                      ListTile(
+                        leading: Icon(Icons.launch),
+                        title: Text("Text"),
+                      ),
+                  body: Column(
+                    children: <Widget>[
+                      ListTile(
+                        leading: SizedBox(),
+                        title: Text("Text"),
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      );
+  }
+}
+

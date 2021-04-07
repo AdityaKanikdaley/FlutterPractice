@@ -109,7 +109,9 @@ class overview extends StatelessWidget {
                   ]
               ),
             ),
-          drawer: drawer(),
+          drawer: new Drawer(
+            child: drawer(),
+          ),
           body: new TabBarView(
               children: <Widget>[
                   new Container(
