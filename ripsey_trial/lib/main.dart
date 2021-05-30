@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+
 
 void main() {
   runApp(new MaterialApp(
@@ -149,12 +151,14 @@ class _State extends State<MyApp> {
                         readOnly: true,
                         controller: dateController,
                         onTap: () async{
+                          final df = new DateFormat('dd/MM/yyyy');
                           var date = await showDatePicker(
                               context: context,
                               initialDate: DateTime.now(),
                               firstDate: DateTime(1900),
                               lastDate: DateTime(2100));
-                          dateController.text = date.toString().substring(0,10);
+                          var slashDate = df.format(date);
+                          dateController.text = slashDate;
                         },
                       )
                     ),
