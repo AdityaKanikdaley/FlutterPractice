@@ -2,6 +2,8 @@
 
 Login Page for PicLet using Flutter(DART)
 
+
+
 <table>
   <tr>
     <td>Dark Theme</td>
@@ -12,14 +14,20 @@ Login Page for PicLet using Flutter(DART)
     <td><img src="https://github.com/AdityaKanikdaley/FlutterPractice/blob/main/piclet_login/images_git/white_pic.jpg" width="200" height="400" /></td>
   </tr>
 </table>
+
+
+<table>
+  <tr>
+    <td>Switch Themes</td>
+    <td>Demo</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/AdityaKanikdaley/FlutterPractice/blob/main/piclet_login/images_git/switchTheme.gif" width="200" height="400" /></td>
+    <td><img src="https://github.com/AdityaKanikdaley/FlutterPractice/blob/main/piclet_login/images_git/demo.gif" width="200" height="400" /></td>
+  </tr>
+</table>
       
 
-
-### Switch Themes:
-<img src="https://github.com/AdityaKanikdaley/FlutterPractice/blob/main/piclet_login/images_git/themeChange.gif" width="200" height="400" />
-
-### Demo:
-<img src="https://github.com/AdityaKanikdaley/FlutterPractice/blob/main/piclet_login/images_git/demo.gif" width="200" height="400" />
 
 ## Getting Started
 
