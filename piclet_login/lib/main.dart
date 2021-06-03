@@ -20,9 +20,9 @@ class _State extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      backgroundColor: _lightmode ? Colors.white70 : Colors.grey[850],
+      backgroundColor: _lightmode ? Color(0xfffffafa) : Colors.grey[850],
       body: new Container(
-        padding: new EdgeInsets.fromLTRB(15, 0, 15, 0),
+        padding: new EdgeInsets.fromLTRB(12, 0, 12, 0),
         child: new ListView(
           scrollDirection: Axis.vertical,
           children: <Widget>[
@@ -58,23 +58,21 @@ class _State extends State<MyApp> {
                   ),
                   Container(
                     decoration: BoxDecoration(
-                        color: _lightmode ? Colors.grey : Colors.grey[850],
-                        borderRadius: BorderRadius.all(Radius.circular(18)),
+                        color: _lightmode ? Colors.grey.shade100 : Colors.grey[850],
+                        borderRadius: BorderRadius.all(Radius.circular(12)),
                         boxShadow: [
                           BoxShadow(
                               color: _lightmode
-                                  ? Colors.black.withOpacity(0.4)
+                                  ? Colors.black.withOpacity(0.3)
                                   : Colors.black54,
                               offset: Offset(4.0, 4.0),
                               blurRadius: 15.0,
                               spreadRadius: 1.0),
                           BoxShadow(
-                              color: _lightmode
-                                  ? Colors.grey[400]
-                                  : Colors.grey[800],
-                              offset: Offset(-4.0, -4.0),
-                              blurRadius: 15.0,
-                              spreadRadius: 1.0),
+                              color: _lightmode ? Colors.white : Colors.grey[800],
+                              offset: _lightmode ? Offset(-10,-10) : Offset(-4.0, -4.0),
+                              blurRadius: _lightmode ? 6.0 : 15.0,
+                              spreadRadius: _lightmode ? 0.0 : 1.0),
                         ]),
                     child: TextField(
                       onSubmitted: (value) {
@@ -111,23 +109,21 @@ class _State extends State<MyApp> {
                   ),
                   Container(
                     decoration: BoxDecoration(
-                        color: _lightmode ? Colors.grey : Colors.grey[850],
+                        color: _lightmode ? Colors.grey.shade100 : Colors.grey[850],
                         borderRadius: BorderRadius.all(Radius.circular(18)),
                         boxShadow: [
                           BoxShadow(
                               color: _lightmode
-                                  ? Colors.black.withOpacity(0.4)
+                                  ? Colors.black.withOpacity(0.3)
                                   : Colors.black54,
                               offset: Offset(4.0, 4.0),
                               blurRadius: 15.0,
                               spreadRadius: 1.0),
                           BoxShadow(
-                              color: _lightmode
-                                  ? Colors.grey[400]
-                                  : Colors.grey[800],
-                              offset: Offset(-4.0, -4.0),
-                              blurRadius: 15.0,
-                              spreadRadius: 1.0),
+                              color: _lightmode ? Colors.white : Colors.grey[800],
+                              offset: _lightmode ? Offset(-10,-10) : Offset(-4.0, -4.0),
+                              blurRadius: _lightmode ? 6.0 : 15.0,
+                              spreadRadius: _lightmode ? 0.0 : 1.0),
                         ]),
                     child: TextField(
                       textAlign: TextAlign.start,
@@ -180,15 +176,15 @@ class _State extends State<MyApp> {
                     BoxShadow(
                       //bottom
                       color: Colors.red[600],
-                      offset: Offset(5.0, 5.0),
-                      blurRadius: 8.0,
+                      offset: _lightmode ? Offset(3.0,3.0) : Offset(4.0, 4.0),
+                      blurRadius: _lightmode ? 4.0 : 6.0,
                       // spreadRadius: 1.0
                     ),
                     BoxShadow(
                       //top
                       color: _lightmode ? Colors.red[800] : Colors.red[200],
-                      offset: Offset(-3.0, -3.0),
-                      blurRadius: 8.0,
+                      offset: _lightmode ? Offset(-3.0, -2.0) : Offset(-2.0, -2.0),
+                      blurRadius: _lightmode ? 4.0 : 6.0,
                       // spreadRadius: 1.0
                     ),
                   ]),
