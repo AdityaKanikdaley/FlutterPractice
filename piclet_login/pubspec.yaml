@@ -8,7 +8,7 @@ version: 1.0.0+1
 environment:
   sdk: ">=2.7.0 <3.0.0"
 
-dependencies:dependencies:
+dependencies:
   font_awesome_flutter: ^9.0.0
   flutter:
     sdk: flutter
@@ -35,9 +35,7 @@ flutter:
      - family: PatrickHand
        fonts:
          - asset: fonts/PatrickHand-Regular.ttf
-dependencies: 
-  flushbar: ^1.10.4
-  font_awesome_flutter: ^9.0.0
+
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

@@ -22,7 +22,7 @@ class _State extends State<MyApp> {
     return new Scaffold(
       backgroundColor: _lightmode ? Color(0xfffffafa) : Colors.grey[850],
       body: new Container(
-        padding: new EdgeInsets.fromLTRB(12, 0, 12, 0),
+        padding: new EdgeInsets.fromLTRB(16, 0, 16, 0),
         child: new ListView(
           scrollDirection: Axis.vertical,
           children: <Widget>[
@@ -47,15 +47,13 @@ class _State extends State<MyApp> {
             new Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 10),
-                    child: Text(
-                      "Username",
-                      style: TextStyle(
-                          color: _lightmode ? Colors.black : Colors.white,
-                          fontSize: 18,),
-                    ),
+                  Text(
+                    "Username",
+                    style: TextStyle(
+                        color: _lightmode ? Colors.black : Colors.white,
+                        fontSize: 20,fontFamily: "PatrickHand"),
                   ),
+                  SizedBox(height: 8),
                   Container(
                     decoration: BoxDecoration(
                         color: _lightmode ? Colors.grey.shade100 : Colors.grey[850],
@@ -98,19 +96,17 @@ class _State extends State<MyApp> {
             new Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 10),
-                    child: Text(
-                      "Password",
-                      style: TextStyle(
-                          color: _lightmode ? Colors.black : Colors.white,
-                          fontSize: 18),
-                    ),
+                  Text(
+                    "Password",
+                    style: TextStyle(
+                        color: _lightmode ? Colors.black : Colors.white,
+                        fontSize: 20,fontFamily: "PatrickHand"),
                   ),
+                  SizedBox(height: 8),
                   Container(
                     decoration: BoxDecoration(
                         color: _lightmode ? Colors.grey.shade100 : Colors.grey[850],
-                        borderRadius: BorderRadius.all(Radius.circular(18)),
+                        borderRadius: BorderRadius.all(Radius.circular(12)),
                         boxShadow: [
                           BoxShadow(
                               color: _lightmode
@@ -151,7 +147,7 @@ class _State extends State<MyApp> {
                       content: const Text(
                         'Mail will be sent to Username',
                         style: TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.bold),
+                            fontSize: 18, fontWeight: FontWeight.bold),
                       ),
                       // action: SnackBarAction(label: 'UNDO', onPressed: scaffold.hideCurrentSnackBar),
                     ),
@@ -160,7 +156,7 @@ class _State extends State<MyApp> {
                 child: Text(
                   "Forgot Password ?",
                   style: TextStyle(
-                      color: _lightmode ? Colors.black : Colors.white),
+                      color: _lightmode ? Colors.black : Colors.white,fontFamily: "PatrickHand", fontSize: 15),
                 ),
               ),
             ),
@@ -171,7 +167,7 @@ class _State extends State<MyApp> {
             new Container(
               decoration: BoxDecoration(
                   color: Colors.red[400],
-                  borderRadius: BorderRadius.all(Radius.circular(18)),
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
                   boxShadow: [
                     BoxShadow(
                       //bottom
@@ -223,7 +219,7 @@ class _State extends State<MyApp> {
                 child: new Text("OR",
                     style: TextStyle(
                         color: _lightmode ? Colors.black : Colors.white,
-                        fontSize: 16))),
+                        fontSize: 18,fontFamily: "PatrickHand"))),
 
             new SizedBox(height: 5),
 
