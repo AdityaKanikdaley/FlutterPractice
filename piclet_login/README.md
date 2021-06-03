@@ -23,7 +23,7 @@ Login Page for PicLet using Flutter(DART)
   </tr>
   <tr>
     <td><img src="https://github.com/AdityaKanikdaley/FlutterPractice/blob/main/piclet_login/images_git/switchTheme.gif" width="200" height="400" /></td>
-    <td><img src="https://github.com/AdityaKanikdaley/FlutterPractice/blob/main/piclet_login/images_git/demo.gif" width="200" height="400" /></td>
+    <td><img src="https://github.com/AdityaKanikdaley/FlutterPractice/blob/main/piclet_login/images_git/demoVideo.gif" width="200" height="400" /></td>
   </tr>
 </table>
       
