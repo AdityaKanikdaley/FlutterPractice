@@ -2,6 +2,33 @@
 
 Login Page for PicLet using Flutter(DART)
 
+<br>
+
+<table>
+  <tr>
+    <td>Dark Theme</td>
+    <td>Light Theme</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/AdityaKanikdaley/FlutterPractice/blob/main/piclet_login/images_git/dark_pic.jpg" width="200" height="400" /></td>
+    <td><img src="https://github.com/AdityaKanikdaley/FlutterPractice/blob/main/piclet_login/images_git/white_pic.jpg" width="200" height="400" /></td>
+  </tr>
+</table>
+
+
+<table>
+  <tr>
+    <td>Switch Themes</td>
+    <td>Demo</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/AdityaKanikdaley/FlutterPractice/blob/main/piclet_login/images_git/switchTheme.gif" width="200" height="400" /></td>
+    <td><img src="https://github.com/AdityaKanikdaley/FlutterPractice/blob/main/piclet_login/images_git/demoVideo.gif" width="200" height="400" /></td>
+  </tr>
+</table>
+      
+<br>
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
