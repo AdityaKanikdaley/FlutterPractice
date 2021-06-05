@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ripsey_trial/bottomNavBar.dart';
+import 'package:ripsey_trial/drawer.dart';
 
 class profileTab extends StatefulWidget {
-
   @override
   _profileTabState createState() => _profileTabState();
 }
@@ -11,388 +11,312 @@ class _profileTabState extends State<profileTab> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-
       //appbar
       appBar: new AppBar(
         elevation: 0.0,
         centerTitle: true,
         iconTheme: IconThemeData(color: Colors.black),
         backgroundColor: Color(0xffeeeeee),
-        // title: new Text('', style: TextStyle(color: Colors.blue[900]),),
+        actions: [
+          Align(
+            alignment: Alignment.topRight,
+            child: GestureDetector(
+              onTap: () {
+                final scaffold = ScaffoldMessenger.of(context);
+                scaffold.showSnackBar(
+                  SnackBar(
+                    backgroundColor: Color(0xffeeeeee),
+                    duration: const Duration(milliseconds: 500),
+                    content: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: const Text(
+                        'Information Saved',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    // action: SnackBarAction(label: 'UNDO', onPressed: scaffold.hideCurrentSnackBar),
+                  ),
+                );
+              },
+              child: Container(
+                margin: EdgeInsets.only(right: 15, top: 20),
+                width: 62,
+                height: 22,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15.0),
+                    color: Color(0xff24bed8)),
+                child: Center(
+                    child: Text(
+                  'Save',
+                  style: TextStyle(color: Colors.white),
+                )),
+              ),
+            ),
+          )
+        ],
       ),
 
       // drawer
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    Text("profile trial")
-                  ],
-                )
-            )
-          ],
+      drawer: ClipRRect(
+        borderRadius: BorderRadius.only(topRight: Radius.circular(20), bottomRight: Radius.circular(80)),
+        child: Drawer(
+          child:drawer(context),
         ),
       ),
 
       //body
       body: new Container(
-          padding: new EdgeInsets.fromLTRB(15, 0, 15, 0),
-          margin: EdgeInsets.fromLTRB(3, 0, 3, 0),
+          padding: new EdgeInsets.fromLTRB(20, 5, 20, 10),
           color: Color(0xffeeeeee),
           child: ListView(
             children: <Widget>[
-              new Text("Tell us about you:",
-                  style: TextStyle( color: Color(0xff38bbd0),
+              //profile
+              new Text("Profile:",
+                  style: TextStyle(
+                      color: Color(0xff45b8c2),
                       fontSize: 18,
-                      fontWeight: FontWeight.bold)),
+                      fontWeight: FontWeight.w800)),
 
-              new SizedBox(height: 15),
+              SizedBox(height: 20),
 
-              //NAME
-              new Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  new Text("Name*", style: TextStyle(color: Color(0xff38bbd0))),
-                  new SizedBox(height: 10),
-                  new  Container(
-                    decoration: BoxDecoration(
-                        color: Colors.grey.shade100,
-                        borderRadius: BorderRadius.circular(6.0),
-                        boxShadow: [
-                          BoxShadow( //bottom
-                            color: Colors.black.withOpacity(0.075),
-                            offset: Offset(10, 10),
-                            blurRadius: 10,
-                          ),
-                          BoxShadow( //top
-                            color: Colors.white,
-                            offset: Offset(-10, -10),
-                            blurRadius: 6.0,
-                          )
-                        ]
-                    ),
-                    child: TextField(
-                      style: TextStyle(color: Colors.blue[900]),
-                      decoration: InputDecoration(
-                        contentPadding: EdgeInsets.all(10),
-                        border: InputBorder.none,
+              //allergies
+              new Container(
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    color: Colors.grey.shade100,
+                    borderRadius: BorderRadius.circular(6.0),
+                    boxShadow: [
+                      BoxShadow(
+                        //bottom
+                        color: Colors.black.withOpacity(0.075),
+                        offset: Offset(5, 5),
+                        blurRadius: 8,
                       ),
-                    ),
-                  ),
-                ],
-              ),
-
-              SizedBox(height: 30),
-
-              //HEIGHT & WEIGHT
-              new Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-
-                  // HEIGHT
-                  new Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      new Text("Height*",style: TextStyle(color: Color(0xff38bbd0))),
-                      new SizedBox(height: 10),
-                      new Row(
-                        children: <Widget>[
-
-                          //Ft
-                          new Container(
-                            width: 60,
-                            decoration: BoxDecoration(
-                                color: Colors.grey.shade100,
-                                borderRadius: BorderRadius.circular(6.0),
-                                boxShadow: [
-                                  BoxShadow( //bottom
-                                    color: Colors.black.withOpacity(0.075),
-                                    offset: Offset(10, 10),
-                                    blurRadius: 10,
-                                  ),
-                                  BoxShadow( //top
-                                    color: Colors.white,
-                                    offset: Offset(-10, -10),
-                                    blurRadius: 6.0,
-                                  )
-                                ]
-                            ),
-                            child: TextField(
-                              textAlign: TextAlign.center,
-                              keyboardType: TextInputType.number,
-                              style: TextStyle(color: Colors.blue[900]),
-                              decoration: InputDecoration(
-                                contentPadding: EdgeInsets.all(10),
-                                border: InputBorder.none,
-                              ),
-                            ),
-                          ),
-                          SizedBox(width: 6),
-                          Text("Ft", style: TextStyle(color: Color(0xff38bbd0))),
-                          SizedBox(width: 8),
-
-                          // INCHES
-                          new Container(
-                            width: 60,
-                            decoration: BoxDecoration(
-                                color: Colors.grey.shade100,
-                                borderRadius: BorderRadius.circular(6.0),
-                                boxShadow: [
-                                  BoxShadow( //bottom
-                                    color: Colors.black.withOpacity(0.075),
-                                    offset: Offset(10, 10),
-                                    blurRadius: 10,
-                                  ),
-                                  BoxShadow( //top
-                                    color: Colors.white,
-                                    offset: Offset(-10, -10),
-                                    blurRadius: 6.0,
-                                  )
-                                ]
-                            ),
-                            child: TextField(
-                              textAlign: TextAlign.center,
-                              keyboardType: TextInputType.number,
-                              style: TextStyle(color: Colors.blue[900]),
-                              decoration: InputDecoration(
-                                contentPadding: EdgeInsets.all(10),
-                                border: InputBorder.none,
-                              ),
-                            ),
-                          ),
-                          SizedBox(width: 6),
-                          Text("In", style: TextStyle(color: Color(0xff38bbd0))),
-                        ],
+                      BoxShadow(
+                        //top
+                        color: Colors.white,
+                        offset: Offset(-4, -4),
+                        blurRadius: 6,
                       )
-                    ],
-                  ),
-
-                  new SizedBox(width: 10),
-
-                  // WEIGHT
-                  new Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      new Text("Weight (Kg)*", style: TextStyle(color: Color(0xff38bbd0))),
-                      new SizedBox(height: 10),
-                      new Container(
-                        width: 170,
-                        decoration: BoxDecoration(
-                            color: Colors.grey.shade100,
-                            borderRadius: BorderRadius.circular(6.0),
-                            boxShadow: [
-                              BoxShadow( //bottom
-                                color: Colors.black.withOpacity(0.075),
-                                offset: Offset(10, 10),
-                                blurRadius: 10,
-                              ),
-                              BoxShadow( //top
-                                color: Colors.white,
-                                offset: Offset(-10, -10),
-                                blurRadius: 6.0,
-                              )
-                            ]
+                    ]),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    new Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Allergies',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                              color: Color(0xff4db6c8)),
                         ),
-                        child: TextField(
-                          textAlign: TextAlign.center,
-                          keyboardType: TextInputType.number,
-                          style: TextStyle(color: Colors.blue[900]),
-                          decoration: InputDecoration(
-                            contentPadding: EdgeInsets.all(10),
-                            border: InputBorder.none,
-                          ),
-                        ),
-                      ),
-                    ],
-                  )
-                ],
+                        Text('No Allergies',
+                            style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.cyan[200]))
+                      ],
+                    ),
+                    new IconButton(onPressed: () {print('allergies edit pressed');}, icon: Icon(Icons.edit, color: Colors.grey,))
+                  ],
+                ),
               ),
 
-              SizedBox(height: 30),
+              SizedBox(height: 20),
 
-              // CHEST & HIP
-              new Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-
-                  // CHEST
-                  new Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      new Text("Chest (Cm)",style: TextStyle(color: Color(0xff38bbd0))),
-                      new SizedBox(height: 10),
-                      new Container(
-                        width: 160,
-                        decoration: BoxDecoration(
-                            color: Colors.grey.shade100,
-                            borderRadius: BorderRadius.circular(6.0),
-                            boxShadow: [
-                              BoxShadow( //bottom
-                                color: Colors.black.withOpacity(0.075),
-                                offset: Offset(10, 10),
-                                blurRadius: 10,
-                                // spreadRadius: 3.0
-                              ),
-                              BoxShadow( //top
-                                color: Colors.white,
-                                offset: Offset(-10, -10),
-                                blurRadius: 6.0,
-                                // spreadRadius: 3.0
-                              )
-                            ]
-                        ),
-                        child: TextField(
-                          textAlign: TextAlign.center,
-                          keyboardType: TextInputType.number,
-                          style: TextStyle(color: Colors.blue[900]),
-                          decoration: InputDecoration(
-                            contentPadding: EdgeInsets.all(10),
-                            border: InputBorder.none,
-                          ),
-                        ),
+              //preferences
+              new Container(
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    color: Colors.grey.shade100,
+                    borderRadius: BorderRadius.circular(6.0),
+                    boxShadow: [
+                      BoxShadow(
+                        //bottom
+                        color: Colors.black.withOpacity(0.075),
+                        offset: Offset(5, 5),
+                        blurRadius: 8,
                       ),
-                    ],
-                  ),
-
-                  new SizedBox(width: 10),
-
-                  // HIP
-                  new Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      new Text("Hip (Cm)", style: TextStyle(color: Color(0xff38bbd0))),
-                      new SizedBox(height: 10),
-                      new Container(
-                        width: 170,
-                        decoration: BoxDecoration(
-                            color: Colors.grey.shade100,
-                            borderRadius: BorderRadius.circular(6.0),
-                            boxShadow: [
-                              BoxShadow( //bottom
-                                color: Colors.black.withOpacity(0.075),
-                                offset: Offset(10, 10),
-                                blurRadius: 10,
-                                // spreadRadius: 3.0
-                              ),
-                              BoxShadow( //top
-                                color: Colors.white,
-                                offset: Offset(-10, -10),
-                                blurRadius: 6.0,
-                                // spreadRadius: 3.0
-                              )
-                            ]
+                      BoxShadow(
+                        //top
+                        color: Colors.white,
+                        offset: Offset(-4, -4),
+                        blurRadius: 6,
+                      )
+                    ]),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    new Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Preferences',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                              color: Color(0xff4db6c8)),
                         ),
-                        child: TextField(
-                          textAlign: TextAlign.center,
-                          keyboardType: TextInputType.number,
-                          style: TextStyle(color: Colors.blue[900]),
-                          decoration: InputDecoration(
-                            contentPadding: EdgeInsets.all(10),
-                            border: InputBorder.none,
-                          ),
-                        ),
-                      ),
-                    ],
-                  )
-                ],
+                        Text('Vegetarian. All days of the week',
+                            style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.cyan[200]))
+                      ],
+                    ),
+                    new IconButton(onPressed: () {print('preferences edit pressed');}, icon: Icon(Icons.edit, color: Colors.grey,))
+                  ],
+                ),
               ),
 
-              SizedBox(height: 30),
+              SizedBox(height: 20),
 
-              //WAIST & TUMMY
-              new Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-
-                  // WAIST
-                  new Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      new Text("Waist (Cm)",style: TextStyle(color: Color(0xff38bbd0))),
-                      new SizedBox(height: 10),
-                      new Container(
-                        width: 160,
-                        decoration: BoxDecoration(
-                            color: Colors.grey.shade100,
-                            borderRadius: BorderRadius.circular(6.0),
-                            boxShadow: [
-                              BoxShadow( //bottom
-                                color: Colors.black.withOpacity(0.075),
-                                offset: Offset(10, 10),
-                                blurRadius: 10,
-                              ),
-                              BoxShadow( //top
-                                color: Colors.white,
-                                offset: Offset(-10, -10),
-                                blurRadius: 6.0,
-                              )
-                            ]
-                        ),
-                        child: TextField(
-                          textAlign: TextAlign.center,
-                          keyboardType: TextInputType.number,
-                          style: TextStyle(color: Colors.blue[900]),
-                          decoration: InputDecoration(
-                            contentPadding: EdgeInsets.all(10),
-                            border: InputBorder.none,
-                          ),
-                        ),
+              //clinical concerns
+              new Container(
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    color: Colors.grey.shade100,
+                    borderRadius: BorderRadius.circular(6.0),
+                    boxShadow: [
+                      BoxShadow(
+                        //bottom
+                        color: Colors.black.withOpacity(0.075),
+                        offset: Offset(5, 5),
+                        blurRadius: 8,
                       ),
-                    ],
-                  ),
-
-                  new SizedBox(width: 10),
-
-                  // TUMMY
-                  new Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      new Text("Tummy (Cm)", style: TextStyle(color: Color(0xff38bbd0))),
-                      new SizedBox(height: 10),
-                      new Container(
-                        width: 170,
-                        decoration: BoxDecoration(
-                            color: Colors.grey.shade100,
-                            borderRadius: BorderRadius.circular(6.0),
-                            boxShadow: [
-                              BoxShadow( //bottom
-                                color: Colors.black.withOpacity(0.075),
-                                offset: Offset(10, 10),
-                                blurRadius: 10,
-                              ),
-                              BoxShadow( //top
-                                color: Colors.white,
-                                offset: Offset(-10, -10),
-                                blurRadius: 6.0,
-                              )
-                            ]
+                      BoxShadow(
+                        //top
+                        color: Colors.white,
+                        offset: Offset(-4, -4),
+                        blurRadius: 6,
+                      )
+                    ]),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    new Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Clinical Concerns',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                              color: Color(0xff4db6c8)),
                         ),
-                        child: TextField(
-                          textAlign: TextAlign.center,
-                          keyboardType: TextInputType.number,
-                          style: TextStyle(color: Colors.blue[900]),
-                          decoration: InputDecoration(
-                            contentPadding: EdgeInsets.all(10),
-                            border: InputBorder.none,
-                          ),
-                        ),
-                      ),
-                    ],
-                  )
-                ],
+                        Text('No Clinical Concerns',
+                            style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.cyan[200]))
+                      ],
+                    ),
+                    new IconButton(onPressed: () {print('clinical concerns edit pressed');}, icon: Icon(Icons.edit, color: Colors.grey,))
+                  ],
+                ),
               ),
 
-              // FORWARD BUTTON AT BOTTOM
+              SizedBox(height: 20),
 
+              //choice of proteins
+              new Container(
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    color: Colors.grey.shade100,
+                    borderRadius: BorderRadius.circular(6.0),
+                    boxShadow: [
+                      BoxShadow(
+                        //bottom
+                        color: Colors.black.withOpacity(0.075),
+                        offset: Offset(5, 5),
+                        blurRadius: 8,
+                      ),
+                      BoxShadow(
+                        //top
+                        color: Colors.white,
+                        offset: Offset(-4, -4),
+                        blurRadius: 6,
+                      )
+                    ]),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    new Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Choice of Proteins',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                              color: Color(0xff4db6c8)),
+                        ),
+                        Text('Paneer, Tofu',
+                            style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.cyan[200]))
+                      ],
+                    ),
+                    new IconButton(onPressed: () {print('choice of proteins edit pressed');}, icon: Icon(Icons.edit, color: Colors.grey,))
+                  ],
+                ),
+              ),
+
+              SizedBox(height: 20),
+
+              //cuisines
+              new Container(
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    color: Colors.grey.shade100,
+                    borderRadius: BorderRadius.circular(6.0),
+                    boxShadow: [
+                      BoxShadow(
+                        //bottom
+                        color: Colors.black.withOpacity(0.075),
+                        offset: Offset(5, 5),
+                        blurRadius: 8,
+                      ),
+                      BoxShadow(
+                        //top
+                        color: Colors.white,
+                        offset: Offset(-4, -4),
+                        blurRadius: 6,
+                      )
+                    ]),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    new Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Cuisines',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                              color: Color(0xff4db6c8)),
+                        ),
+                        Text('North Indian, South Indian, Bengali',
+                            style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.cyan[200]))
+                      ],
+                    ),
+                    new IconButton(onPressed: () {print('cuisines edit pressed');}, icon: Icon(Icons.edit, color: Colors.grey,))
+                  ],
+                ),
+              ),
 
             ],
-          )
-      ),
+          )),
       // body ends
 
       bottomNavigationBar: bottomNavBar(5),

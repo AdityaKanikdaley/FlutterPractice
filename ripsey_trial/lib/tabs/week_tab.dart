@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ripsey_trial/bottomNavBar.dart';
+import 'package:ripsey_trial/drawer.dart';
 
 class weekTab extends StatefulWidget {
   @override
@@ -20,17 +21,10 @@ class _weekTabState extends State<weekTab> {
       ),
 
       // drawer
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-                child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[Text("week trial")],
-            ))
-          ],
+      drawer: ClipRRect(
+        borderRadius: BorderRadius.only(topRight: Radius.circular(20), bottomRight: Radius.circular(80)),
+        child: Drawer(
+          child:drawer(context),
         ),
       ),
 
@@ -43,22 +37,22 @@ class _weekTabState extends State<weekTab> {
 
               //personalize btn
               new Container(
-                padding: EdgeInsets.all(2),
+                padding: EdgeInsets.all(1.5),
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(6.0),
                     boxShadow: [
                       BoxShadow(
                         //bottom
-                        color: Colors.black.withOpacity(0.6),
-                        offset: Offset(5, 5),
-                        blurRadius: 10,
+                        color: Colors.black.withOpacity(0.3),
+                        offset: Offset(4, 4),
+                        blurRadius: 6,
                       ),
                       BoxShadow(
                         //top
-                        color: Colors.white70,
-                        offset: Offset(-5, -5),
-                        blurRadius: 6.0,
+                        color: Colors.white,
+                        offset: Offset(-4, -4),
+                        blurRadius: 4,
                       )
                     ]),
                 child: Container(
@@ -91,14 +85,14 @@ class _weekTabState extends State<weekTab> {
                           BoxShadow(
                             //bottom
                             color: Colors.black.withOpacity(0.075),
-                            offset: Offset(10, 10),
-                            blurRadius: 10,
+                            offset: Offset(5, 5),
+                            blurRadius: 8,
                           ),
                           BoxShadow(
                             //top
                             color: Colors.white,
-                            offset: Offset(-10, -10),
-                            blurRadius: 6.0,
+                            offset: Offset(-4, -4),
+                            blurRadius: 6,
                           )
                         ]),
                     child: TextButton(
@@ -119,14 +113,14 @@ class _weekTabState extends State<weekTab> {
                           BoxShadow(
                             //bottom
                             color: Colors.black.withOpacity(0.075),
-                            offset: Offset(10, 10),
-                            blurRadius: 10,
+                            offset: Offset(5, 5),
+                            blurRadius: 8,
                           ),
                           BoxShadow(
                             //top
                             color: Colors.white,
-                            offset: Offset(-10, -10),
-                            blurRadius: 6.0,
+                            offset: Offset(-4, -4),
+                            blurRadius: 6,
                           )
                         ]),
                     child: TextButton(
@@ -138,7 +132,7 @@ class _weekTabState extends State<weekTab> {
                 ],
               ),
 
-              SizedBox(height: 35),
+              SizedBox(height: 20),
 
               //day-3,4
               new Row(
@@ -155,14 +149,14 @@ class _weekTabState extends State<weekTab> {
                           BoxShadow(
                             //bottom
                             color: Colors.black.withOpacity(0.075),
-                            offset: Offset(10, 10),
-                            blurRadius: 10,
+                            offset: Offset(5, 5),
+                            blurRadius: 8,
                           ),
                           BoxShadow(
                             //top
                             color: Colors.white,
-                            offset: Offset(-10, -10),
-                            blurRadius: 6.0,
+                            offset: Offset(-4, -4),
+                            blurRadius: 6,
                           )
                         ]),
                     child: TextButton(
@@ -183,14 +177,14 @@ class _weekTabState extends State<weekTab> {
                           BoxShadow(
                             //bottom
                             color: Colors.black.withOpacity(0.075),
-                            offset: Offset(10, 10),
-                            blurRadius: 10,
+                            offset: Offset(5, 5),
+                            blurRadius: 8,
                           ),
                           BoxShadow(
                             //top
                             color: Colors.white,
-                            offset: Offset(-10, -10),
-                            blurRadius: 6.0,
+                            offset: Offset(-4, -4),
+                            blurRadius: 6,
                           )
                         ]),
                     child: TextButton(
@@ -202,7 +196,7 @@ class _weekTabState extends State<weekTab> {
                 ],
               ),
 
-              SizedBox(height: 35),
+              SizedBox(height: 20),
 
               //day-5,6
               new Row(
@@ -219,14 +213,14 @@ class _weekTabState extends State<weekTab> {
                           BoxShadow(
                             //bottom
                             color: Colors.black.withOpacity(0.075),
-                            offset: Offset(10, 10),
-                            blurRadius: 10,
+                            offset: Offset(5, 5),
+                            blurRadius: 8,
                           ),
                           BoxShadow(
                             //top
                             color: Colors.white,
-                            offset: Offset(-10, -10),
-                            blurRadius: 6.0,
+                            offset: Offset(-4, -4),
+                            blurRadius: 6,
                           )
                         ]),
                     child: TextButton(
@@ -247,14 +241,14 @@ class _weekTabState extends State<weekTab> {
                           BoxShadow(
                             //bottom
                             color: Colors.black.withOpacity(0.075),
-                            offset: Offset(10, 10),
-                            blurRadius: 10,
+                            offset: Offset(5, 5),
+                            blurRadius: 8,
                           ),
                           BoxShadow(
                             //top
                             color: Colors.white,
-                            offset: Offset(-10, -10),
-                            blurRadius: 6.0,
+                            offset: Offset(-4, -4),
+                            blurRadius: 6,
                           )
                         ]),
                     child: TextButton(
@@ -266,7 +260,7 @@ class _weekTabState extends State<weekTab> {
                 ],
               ),
 
-              SizedBox(height: 35),
+              SizedBox(height: 20),
 
               //day-7
               new Row(
@@ -283,14 +277,14 @@ class _weekTabState extends State<weekTab> {
                           BoxShadow(
                             //bottom
                             color: Colors.black.withOpacity(0.075),
-                            offset: Offset(10, 10),
-                            blurRadius: 10,
+                            offset: Offset(5, 5),
+                            blurRadius: 8,
                           ),
                           BoxShadow(
                             //top
                             color: Colors.white,
-                            offset: Offset(-10, -10),
-                            blurRadius: 6.0,
+                            offset: Offset(-4, -4),
+                            blurRadius: 6,
                           )
                         ]),
                     child: TextButton(

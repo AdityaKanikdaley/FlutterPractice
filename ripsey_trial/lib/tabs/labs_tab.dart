@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ripsey_trial/bottomNavBar.dart';
+import 'package:ripsey_trial/drawer.dart';
 
 class labsTab extends StatefulWidget {
 
@@ -22,20 +23,10 @@ class _labsTabState extends State<labsTab> {
       ),
 
       // drawer
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    Text("labs trial")
-                  ],
-                )
-            )
-          ],
+      drawer: ClipRRect(
+        borderRadius: BorderRadius.only(topRight: Radius.circular(20), bottomRight: Radius.circular(80)),
+        child: Drawer(
+          child:drawer(context),
         ),
       ),
 

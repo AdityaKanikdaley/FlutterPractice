@@ -16,7 +16,7 @@ class bottomNavBar extends StatelessWidget{
           //home
           new Container(
             padding: EdgeInsets.all(2),
-            width: 63, height: 63,
+            width: 60, height: 63,
             decoration: BoxDecoration(
                 color: pageNumber == 1 ? Colors.blue[300] : Color(0xffeeeeee),
                 borderRadius: BorderRadius.circular(6.0),
@@ -46,8 +46,8 @@ class bottomNavBar extends StatelessWidget{
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.home_outlined),
-                      Text("Home")
+                      Icon(Icons.home_outlined, color: Colors.blue[300],size: 27,),
+                      Text("Home", style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold, color: Colors.blue[800]),)
                     ],
                   )
               ),
@@ -57,7 +57,7 @@ class bottomNavBar extends StatelessWidget{
           //week
           new Container(
             padding: EdgeInsets.all(2),
-            width: 63, height: 63,
+            width: 60, height: 63,
             decoration: BoxDecoration(
                 color: pageNumber == 2 ? Colors.blue[300] : Color(0xffeeeeee),
                 borderRadius: BorderRadius.circular(6.0),
@@ -87,8 +87,8 @@ class bottomNavBar extends StatelessWidget{
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.calendar_today_outlined),
-                      Text("Week")
+                      Icon(Icons.calendar_today_outlined, color: Colors.blue[300],size: 27,),
+                      Text("Week", style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold, color: Colors.blue[800]))
                     ],
                   )
               ),
@@ -98,7 +98,7 @@ class bottomNavBar extends StatelessWidget{
           //buy
           new Container(
             padding: EdgeInsets.all(2),
-            width: 63, height: 63,
+            width: 60, height: 63,
             decoration: BoxDecoration(
                 color: pageNumber == 3 ? Colors.blue[300] : Color(0xffeeeeee),
                 borderRadius: BorderRadius.circular(6.0),
@@ -128,8 +128,8 @@ class bottomNavBar extends StatelessWidget{
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.shopping_bag_outlined),
-                      Text("Buy")
+                      Icon(Icons.shopping_bag_outlined, color: Colors.blue[300],size: 27,),
+                      Text("Buy", style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold, color: Colors.blue[800]))
                     ],
                   )
               ),
@@ -139,7 +139,7 @@ class bottomNavBar extends StatelessWidget{
           //labs
           new Container(
             padding: EdgeInsets.all(2),
-            width: 63, height: 63,
+            width: 60, height: 63,
             decoration: BoxDecoration(
                 color: pageNumber == 4 ? Colors.blue[300] : Color(0xffeeeeee),
                 borderRadius: BorderRadius.circular(6.0),
@@ -164,13 +164,13 @@ class bottomNavBar extends StatelessWidget{
               child: TextButton(
                   onPressed: () {
                     print("labs pressed");
-                    Navigator.pushReplacementNamed(context, '/lab');
+                    // Navigator.pushReplacementNamed(context, '/lab');
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.whatshot_outlined),
-                      Text("Labs")
+                      Icon(Icons.whatshot_outlined, color: Colors.grey,size: 27,),
+                      Text("Labs", style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold, color: Colors.grey))
                     ],
                   )
               ),
@@ -180,7 +180,7 @@ class bottomNavBar extends StatelessWidget{
           //profile
           new Container(
             padding: EdgeInsets.all(2),
-            width: 63, height: 63,
+            width: 60, height: 63,
             decoration: BoxDecoration(
                 color: pageNumber == 5 ? Colors.blue[300] : Color(0xffeeeeee),
                 borderRadius: BorderRadius.circular(6.0),
@@ -210,8 +210,8 @@ class bottomNavBar extends StatelessWidget{
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.person_outline),
-                      Text("Profile")
+                      Icon(Icons.person_outline, color: Colors.blue[300],size: 27,),
+                      Text("Profile", style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold, color: Colors.blue[800]))
                     ],
                   )
               ),

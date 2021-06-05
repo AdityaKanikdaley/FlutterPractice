@@ -13,6 +13,7 @@ class _loginState extends State<login> {
 
   Widget _bNavBar() {
     return Container(
+      color: Color(0xffeeeeee),
       padding: EdgeInsets.fromLTRB(0, 0, 10, 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
@@ -52,7 +53,7 @@ class _loginState extends State<login> {
         elevation: 0.0,
         centerTitle: true,
         iconTheme: IconThemeData(color: Colors.black),
-        backgroundColor: Colors.transparent,
+        backgroundColor: Color(0xffeeeeee),
         title: new Text(
           'Ripsey',
           style: TextStyle(
@@ -99,6 +100,7 @@ class _loginState extends State<login> {
       body: new Container(
           padding: new EdgeInsets.fromLTRB(15, 0, 15, 0),
           margin: EdgeInsets.fromLTRB(3, 0, 3, 0),
+          color: Color(0xffeeeeee),
           child: ListView(
             children: <Widget>[
               new Text("Tell us about you:",
@@ -123,13 +125,13 @@ class _loginState extends State<login> {
                           BoxShadow(
                             //bottom
                             color: Colors.black.withOpacity(0.075),
-                            offset: Offset(10, 10),
-                            blurRadius: 10,
+                            offset: Offset(5, 5),
+                            blurRadius: 8,
                           ),
                           BoxShadow(
                             //top
                             color: Colors.white,
-                            offset: Offset(-10, -10),
+                            offset: Offset(-4, -4),
                             blurRadius: 6.0,
                           )
                         ]),
@@ -166,13 +168,13 @@ class _loginState extends State<login> {
                                 BoxShadow(
                                   //bottom
                                   color: Colors.black.withOpacity(0.075),
-                                  offset: Offset(10, 10),
-                                  blurRadius: 10,
+                                  offset: Offset(5, 5),
+                                  blurRadius: 8,
                                 ),
                                 BoxShadow(
                                   //top
                                   color: Colors.white,
-                                  offset: Offset(-10, -10),
+                                  offset: Offset(-4, -4),
                                   blurRadius: 6.0,
                                 )
                               ]),
@@ -220,13 +222,13 @@ class _loginState extends State<login> {
                                   BoxShadow(
                                     //bottom
                                     color: Colors.black.withOpacity(0.075),
-                                    offset: Offset(10, 10),
-                                    blurRadius: 10,
+                                    offset: Offset(5, 5),
+                                    blurRadius: 8,
                                   ),
                                   BoxShadow(
                                     //top
                                     color: Colors.white,
-                                    offset: Offset(-10, -10),
+                                    offset: Offset(-4, -4),
                                     blurRadius: 6.0,
                                   )
                                 ]),
@@ -245,13 +247,13 @@ class _loginState extends State<login> {
                                   BoxShadow(
                                     //bottom
                                     color: Colors.black.withOpacity(0.075),
-                                    offset: Offset(10, 10),
-                                    blurRadius: 10,
+                                    offset: Offset(5, 5),
+                                    blurRadius: 8,
                                   ),
                                   BoxShadow(
                                     //top
                                     color: Colors.white,
-                                    offset: Offset(-10, -10),
+                                    offset: Offset(-4, -4),
                                     blurRadius: 6.0,
                                   )
                                 ]),
@@ -289,13 +291,13 @@ class _loginState extends State<login> {
                                   BoxShadow(
                                     //bottom
                                     color: Colors.black.withOpacity(0.075),
-                                    offset: Offset(10, 10),
-                                    blurRadius: 10,
+                                    offset: Offset(5, 5),
+                                    blurRadius: 8,
                                   ),
                                   BoxShadow(
                                     //top
                                     color: Colors.white,
-                                    offset: Offset(-10, -10),
+                                    offset: Offset(-4, -4),
                                     blurRadius: 6.0,
                                   )
                                 ]),
@@ -324,13 +326,13 @@ class _loginState extends State<login> {
                                   BoxShadow(
                                     //bottom
                                     color: Colors.black.withOpacity(0.075),
-                                    offset: Offset(10, 10),
-                                    blurRadius: 10,
+                                    offset: Offset(5, 5),
+                                    blurRadius: 8,
                                   ),
                                   BoxShadow(
                                     //top
                                     color: Colors.white,
-                                    offset: Offset(-10, -10),
+                                    offset: Offset(-4, -4),
                                     blurRadius: 6.0,
                                   )
                                 ]),
@@ -370,13 +372,13 @@ class _loginState extends State<login> {
                               BoxShadow(
                                 //bottom
                                 color: Colors.black.withOpacity(0.075),
-                                offset: Offset(10, 10),
-                                blurRadius: 10,
+                                offset: Offset(5, 5),
+                                blurRadius: 8,
                               ),
                               BoxShadow(
                                 //top
                                 color: Colors.white,
-                                offset: Offset(-10, -10),
+                                offset: Offset(-4, -4),
                                 blurRadius: 6.0,
                               )
                             ]),
@@ -417,16 +419,14 @@ class _loginState extends State<login> {
                               BoxShadow(
                                 //bottom
                                 color: Colors.black.withOpacity(0.075),
-                                offset: Offset(10, 10),
-                                blurRadius: 10,
-                                // spreadRadius: 3.0
+                                offset: Offset(5, 5),
+                                blurRadius: 8,
                               ),
                               BoxShadow(
                                 //top
                                 color: Colors.white,
-                                offset: Offset(-10, -10),
+                                offset: Offset(-4, -4),
                                 blurRadius: 6.0,
-                                // spreadRadius: 3.0
                               )
                             ]),
                         child: TextField(
@@ -460,16 +460,14 @@ class _loginState extends State<login> {
                               BoxShadow(
                                 //bottom
                                 color: Colors.black.withOpacity(0.075),
-                                offset: Offset(10, 10),
-                                blurRadius: 10,
-                                // spreadRadius: 3.0
+                                offset: Offset(5, 5),
+                                blurRadius: 8,
                               ),
                               BoxShadow(
                                 //top
                                 color: Colors.white,
-                                offset: Offset(-10, -10),
+                                offset: Offset(-4, -4),
                                 blurRadius: 6.0,
-                                // spreadRadius: 3.0
                               )
                             ]),
                         child: TextField(
@@ -509,13 +507,13 @@ class _loginState extends State<login> {
                               BoxShadow(
                                 //bottom
                                 color: Colors.black.withOpacity(0.075),
-                                offset: Offset(10, 10),
-                                blurRadius: 10,
+                                offset: Offset(5, 5),
+                                blurRadius: 8,
                               ),
                               BoxShadow(
                                 //top
                                 color: Colors.white,
-                                offset: Offset(-10, -10),
+                                offset: Offset(-4, -4),
                                 blurRadius: 6.0,
                               )
                             ]),
@@ -550,13 +548,13 @@ class _loginState extends State<login> {
                               BoxShadow(
                                 //bottom
                                 color: Colors.black.withOpacity(0.075),
-                                offset: Offset(10, 10),
-                                blurRadius: 10,
+                                offset: Offset(5, 5),
+                                blurRadius: 8,
                               ),
                               BoxShadow(
                                 //top
                                 color: Colors.white,
-                                offset: Offset(-10, -10),
+                                offset: Offset(-4, -4),
                                 blurRadius: 6.0,
                               )
                             ]),
