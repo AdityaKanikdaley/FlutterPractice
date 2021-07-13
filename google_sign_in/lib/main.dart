@@ -17,13 +17,14 @@ class _State extends State<MyApp> {
   Future signIn() async {
     final user = await GoogleSignInApi.login();
 
-    if(user == null){
-      ScaffoldMessenger.of(context)
-          .showSnackBar((SnackBar(content: Text("Sign-In failed"),)));
+    if (user == null) {
+      ScaffoldMessenger.of(context).showSnackBar((SnackBar(
+        content: Text("Sign-In failed"),
+      )));
     }
 
-    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => LoggedInPage(user: user!)
-    ));
+    Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (context) => LoggedInPage(user: user!)));
   }
 
   @override
@@ -38,14 +39,12 @@ class _State extends State<MyApp> {
           children: <Widget>[
             ElevatedButton.icon(
               style: ElevatedButton.styleFrom(
-                primary: Colors.white,
-                onPrimary: Colors.black,
-                minimumSize: Size(double.infinity, 50)
-              ),
+                  primary: Colors.white,
+                  onPrimary: Colors.black,
+                  minimumSize: Size(double.infinity, 50)),
               icon: Icon(Icons.gavel_outlined),
               label: Text('Sign Up with Google'),
               onPressed: signIn,
-
             )
           ],
         ),
