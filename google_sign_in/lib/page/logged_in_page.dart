@@ -16,38 +16,46 @@ class LoggedInPage extends StatelessWidget {
         appBar: AppBar(
           title: Text('Logged In'),
           centerTitle: true,
-          actions: [
-            TextButton(
-                child: Text('LogOut', style: TextStyle(color: Colors.white),),
-                onPressed: () async {
-                  await GoogleSignInApi.logout();
-                  print('LoggedOut');
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => MyApp()));
-                })
-          ],
         ),
         body: Container(
           alignment: Alignment.center,
           color: Colors.blue[200],
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("Profile", style: TextStyle(fontSize: 24)),
               SizedBox(height: 32),
               CircleAvatar(
-                radius: 40,
+                radius: 60,
                 backgroundImage: NetworkImage(user.photoUrl!),
               ),
-              SizedBox(height: 8),
+              SizedBox(height: 10),
+              //name
               Text(
                 'Name: ' + user.displayName!,
-                style: TextStyle(color: Colors.white, fontSize: 20),
+                style: TextStyle(color: Colors.black, fontSize: 20),
               ),
               SizedBox(height: 8),
+              //email
               Text(
                 'Email: ' + user.email,
-                style: TextStyle(color: Colors.white, fontSize: 20),
+                style: TextStyle(color: Colors.black, fontSize: 20),
               ),
+              SizedBox(height: 10),
+              //logOut btn
+              ElevatedButton(
+                  style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all(Colors.redAccent)),
+                  child: Text(
+                    'LogOut',
+                    style: TextStyle(color: Colors.black),
+                  ),
+                  onPressed: () async {
+                    await GoogleSignInApi.logout();
+                    print('LoggedOut');
+                    Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(builder: (context) => MyApp()));
+                  })
             ],
           ),
         ),
