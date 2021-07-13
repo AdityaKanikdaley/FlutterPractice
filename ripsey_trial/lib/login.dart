@@ -13,7 +13,7 @@ class _loginState extends State<login> {
 
   Widget _bNavBar() {
     return Container(
-      color: Color(0xffeeeeee),
+      color: Colors.grey[850],
       padding: EdgeInsets.fromLTRB(0, 0, 10, 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
@@ -48,19 +48,20 @@ class _loginState extends State<login> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      backgroundColor: Colors.grey[850],
       //appbar
       appBar: new AppBar(
         elevation: 0.0,
         centerTitle: true,
         iconTheme: IconThemeData(color: Colors.black),
-        backgroundColor: Color(0xffeeeeee),
+        backgroundColor: Colors.grey[850],
         title: new Text(
           'Ripsey',
           style: TextStyle(
             letterSpacing: 1.4,
             fontWeight: FontWeight.w100,
             fontSize: 32,
-            color: Colors.blue[800],
+            color: Colors.blue[700],
             fontFamily: 'Lobster',
             fontStyle: FontStyle.italic,
             shadows: <Shadow>[
@@ -82,25 +83,24 @@ class _loginState extends State<login> {
       ),
 
       // drawer
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-                child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[Text("trial")],
-            ))
-          ],
-        ),
-      ),
+      // drawer: Drawer(
+      //   child: ListView(
+      //     padding: EdgeInsets.zero,
+      //     children: <Widget>[
+      //       DrawerHeader(
+      //           child: Column(
+      //           mainAxisAlignment: MainAxisAlignment.center,
+      //           mainAxisSize: MainAxisSize.min,
+      //           children: <Widget>[Text("trial")],
+      //       ))
+      //     ],
+      //   ),
+      // ),
 
       //body
       body: new Container(
           padding: new EdgeInsets.fromLTRB(15, 0, 15, 0),
           margin: EdgeInsets.fromLTRB(3, 0, 3, 0),
-          color: Color(0xffeeeeee),
           child: ListView(
             children: <Widget>[
               new Text("Tell us about you:",
@@ -119,24 +119,24 @@ class _loginState extends State<login> {
                   new SizedBox(height: 10),
                   new Container(
                     decoration: BoxDecoration(
-                        color: Colors.grey.shade100,
+                        color: Colors.grey[850],
                         borderRadius: BorderRadius.circular(6.0),
                         boxShadow: [
                           BoxShadow(
                             //bottom
-                            color: Colors.black.withOpacity(0.075),
+                            color: Colors.black54,
                             offset: Offset(5, 5),
                             blurRadius: 8,
                           ),
                           BoxShadow(
                             //top
-                            color: Colors.white,
+                            color: Colors.grey[800],
                             offset: Offset(-4, -4),
                             blurRadius: 6.0,
                           )
                         ]),
                     child: TextField(
-                      style: TextStyle(color: Colors.blue[900]),
+                      style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
                         contentPadding: EdgeInsets.all(10),
                         border: InputBorder.none,
@@ -162,24 +162,24 @@ class _loginState extends State<login> {
                       new Container(
                           width: 160,
                           decoration: BoxDecoration(
-                              color: Colors.grey.shade100,
+                              color: Colors.grey[850],
                               borderRadius: BorderRadius.circular(6.0),
                               boxShadow: [
                                 BoxShadow(
                                   //bottom
-                                  color: Colors.black.withOpacity(0.075),
+                                  color: Colors.black54,
                                   offset: Offset(5, 5),
                                   blurRadius: 8,
                                 ),
                                 BoxShadow(
                                   //top
-                                  color: Colors.white,
+                                  color: Colors.grey[800],
                                   offset: Offset(-4, -4),
                                   blurRadius: 6.0,
                                 )
                               ]),
                           child: TextField(
-                            style: TextStyle(color: Colors.blue[900]),
+                            style: TextStyle(color: Colors.white),
                             decoration: InputDecoration(
                               contentPadding: EdgeInsets.all(10),
                               border: InputBorder.none,
@@ -216,18 +216,18 @@ class _loginState extends State<login> {
                           new Container(
                             width: 80,
                             decoration: BoxDecoration(
-                                color: Colors.grey.shade100,
+                                color: Colors.grey[850],
                                 borderRadius: BorderRadius.circular(6.0),
                                 boxShadow: [
                                   BoxShadow(
                                     //bottom
-                                    color: Colors.black.withOpacity(0.075),
+                                    color: Colors.black54,
                                     offset: Offset(5, 5),
                                     blurRadius: 8,
                                   ),
                                   BoxShadow(
                                     //top
-                                    color: Colors.white,
+                                    color: Colors.grey[800],
                                     offset: Offset(-4, -4),
                                     blurRadius: 6.0,
                                   )
@@ -241,18 +241,18 @@ class _loginState extends State<login> {
                           new Container(
                             width: 80,
                             decoration: BoxDecoration(
-                                color: Colors.grey.shade100,
+                                color: Colors.grey[850],
                                 borderRadius: BorderRadius.circular(6.0),
                                 boxShadow: [
                                   BoxShadow(
                                     //bottom
-                                    color: Colors.black.withOpacity(0.075),
+                                    color: Colors.black54,
                                     offset: Offset(5, 5),
                                     blurRadius: 8,
                                   ),
                                   BoxShadow(
                                     //top
-                                    color: Colors.white,
+                                    color: Colors.grey[800],
                                     offset: Offset(-4, -4),
                                     blurRadius: 6.0,
                                   )
@@ -285,18 +285,18 @@ class _loginState extends State<login> {
                           new Container(
                             width: 60,
                             decoration: BoxDecoration(
-                                color: Colors.grey.shade100,
+                                color: Colors.grey[850],
                                 borderRadius: BorderRadius.circular(6.0),
                                 boxShadow: [
                                   BoxShadow(
                                     //bottom
-                                    color: Colors.black.withOpacity(0.075),
+                                    color: Colors.black54,
                                     offset: Offset(5, 5),
                                     blurRadius: 8,
                                   ),
                                   BoxShadow(
                                     //top
-                                    color: Colors.white,
+                                    color: Colors.grey[800],
                                     offset: Offset(-4, -4),
                                     blurRadius: 6.0,
                                   )
@@ -304,7 +304,7 @@ class _loginState extends State<login> {
                             child: TextField(
                               textAlign: TextAlign.center,
                               keyboardType: TextInputType.number,
-                              style: TextStyle(color: Colors.blue[900]),
+                              style: TextStyle(color: Colors.white),
                               decoration: InputDecoration(
                                 contentPadding: EdgeInsets.all(10),
                                 border: InputBorder.none,
@@ -320,18 +320,18 @@ class _loginState extends State<login> {
                           new Container(
                             width: 60,
                             decoration: BoxDecoration(
-                                color: Colors.grey.shade100,
+                                color: Colors.grey[850],
                                 borderRadius: BorderRadius.circular(6.0),
                                 boxShadow: [
                                   BoxShadow(
                                     //bottom
-                                    color: Colors.black.withOpacity(0.075),
+                                    color: Colors.black54,
                                     offset: Offset(5, 5),
                                     blurRadius: 8,
                                   ),
                                   BoxShadow(
                                     //top
-                                    color: Colors.white,
+                                    color: Colors.grey[800],
                                     offset: Offset(-4, -4),
                                     blurRadius: 6.0,
                                   )
@@ -339,7 +339,7 @@ class _loginState extends State<login> {
                             child: TextField(
                               textAlign: TextAlign.center,
                               keyboardType: TextInputType.number,
-                              style: TextStyle(color: Colors.blue[900]),
+                              style: TextStyle(color: Colors.white),
                               decoration: InputDecoration(
                                 contentPadding: EdgeInsets.all(10),
                                 border: InputBorder.none,
@@ -366,18 +366,18 @@ class _loginState extends State<login> {
                       new Container(
                         width: 170,
                         decoration: BoxDecoration(
-                            color: Colors.grey.shade100,
+                            color: Colors.grey[850],
                             borderRadius: BorderRadius.circular(6.0),
                             boxShadow: [
                               BoxShadow(
                                 //bottom
-                                color: Colors.black.withOpacity(0.075),
+                                color: Colors.black54,
                                 offset: Offset(5, 5),
                                 blurRadius: 8,
                               ),
                               BoxShadow(
                                 //top
-                                color: Colors.white,
+                                color: Colors.grey[800],
                                 offset: Offset(-4, -4),
                                 blurRadius: 6.0,
                               )
@@ -385,7 +385,7 @@ class _loginState extends State<login> {
                         child: TextField(
                           textAlign: TextAlign.center,
                           keyboardType: TextInputType.number,
-                          style: TextStyle(color: Colors.blue[900]),
+                          style: TextStyle(color: Colors.white),
                           decoration: InputDecoration(
                             contentPadding: EdgeInsets.all(10),
                             border: InputBorder.none,
@@ -413,18 +413,18 @@ class _loginState extends State<login> {
                       new Container(
                         width: 160,
                         decoration: BoxDecoration(
-                            color: Colors.grey.shade100,
+                            color: Colors.grey[850],
                             borderRadius: BorderRadius.circular(6.0),
                             boxShadow: [
                               BoxShadow(
                                 //bottom
-                                color: Colors.black.withOpacity(0.075),
+                                color: Colors.black54,
                                 offset: Offset(5, 5),
                                 blurRadius: 8,
                               ),
                               BoxShadow(
                                 //top
-                                color: Colors.white,
+                                color: Colors.grey[800],
                                 offset: Offset(-4, -4),
                                 blurRadius: 6.0,
                               )
@@ -432,7 +432,7 @@ class _loginState extends State<login> {
                         child: TextField(
                           textAlign: TextAlign.center,
                           keyboardType: TextInputType.number,
-                          style: TextStyle(color: Colors.blue[900]),
+                          style: TextStyle(color: Colors.white),
                           decoration: InputDecoration(
                             contentPadding: EdgeInsets.all(10),
                             border: InputBorder.none,
@@ -454,18 +454,18 @@ class _loginState extends State<login> {
                       new Container(
                         width: 170,
                         decoration: BoxDecoration(
-                            color: Colors.grey.shade100,
+                            color: Colors.grey[850],
                             borderRadius: BorderRadius.circular(6.0),
                             boxShadow: [
                               BoxShadow(
                                 //bottom
-                                color: Colors.black.withOpacity(0.075),
+                                color: Colors.black54,
                                 offset: Offset(5, 5),
                                 blurRadius: 8,
                               ),
                               BoxShadow(
                                 //top
-                                color: Colors.white,
+                                color: Colors.grey[800],
                                 offset: Offset(-4, -4),
                                 blurRadius: 6.0,
                               )
@@ -473,7 +473,7 @@ class _loginState extends State<login> {
                         child: TextField(
                           textAlign: TextAlign.center,
                           keyboardType: TextInputType.number,
-                          style: TextStyle(color: Colors.blue[900]),
+                          style: TextStyle(color: Colors.white),
                           decoration: InputDecoration(
                             contentPadding: EdgeInsets.all(10),
                             border: InputBorder.none,
@@ -501,18 +501,18 @@ class _loginState extends State<login> {
                       new Container(
                         width: 160,
                         decoration: BoxDecoration(
-                            color: Colors.grey.shade100,
+                            color: Colors.grey[850],
                             borderRadius: BorderRadius.circular(6.0),
                             boxShadow: [
                               BoxShadow(
                                 //bottom
-                                color: Colors.black.withOpacity(0.075),
+                                color: Colors.black54,
                                 offset: Offset(5, 5),
                                 blurRadius: 8,
                               ),
                               BoxShadow(
                                 //top
-                                color: Colors.white,
+                                color: Colors.grey[800],
                                 offset: Offset(-4, -4),
                                 blurRadius: 6.0,
                               )
@@ -520,7 +520,7 @@ class _loginState extends State<login> {
                         child: TextField(
                           textAlign: TextAlign.center,
                           keyboardType: TextInputType.number,
-                          style: TextStyle(color: Colors.blue[900]),
+                          style: TextStyle(color: Colors.white),
                           decoration: InputDecoration(
                             contentPadding: EdgeInsets.all(10),
                             border: InputBorder.none,
@@ -542,18 +542,18 @@ class _loginState extends State<login> {
                       new Container(
                         width: 170,
                         decoration: BoxDecoration(
-                            color: Colors.grey.shade100,
+                            color: Colors.grey[850],
                             borderRadius: BorderRadius.circular(6.0),
                             boxShadow: [
                               BoxShadow(
                                 //bottom
-                                color: Colors.black.withOpacity(0.075),
+                                color: Colors.black54,
                                 offset: Offset(5, 5),
                                 blurRadius: 8,
                               ),
                               BoxShadow(
                                 //top
-                                color: Colors.white,
+                                color: Colors.grey[800],
                                 offset: Offset(-4, -4),
                                 blurRadius: 6.0,
                               )
@@ -561,7 +561,7 @@ class _loginState extends State<login> {
                         child: TextField(
                           textAlign: TextAlign.center,
                           keyboardType: TextInputType.number,
-                          style: TextStyle(color: Colors.blue[900]),
+                          style: TextStyle(color: Colors.white),
                           decoration: InputDecoration(
                             contentPadding: EdgeInsets.all(10),
                             border: InputBorder.none,
@@ -613,7 +613,7 @@ class _loginState extends State<login> {
       child: Text(
         gender,
         style: TextStyle(
-            color: selectedIndex == index ? Colors.blue[900] : Colors.grey),
+            color: selectedIndex == index ? Colors.red : Colors.white70),
       ),
     );
   }

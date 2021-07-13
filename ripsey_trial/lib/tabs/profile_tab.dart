@@ -11,12 +11,13 @@ class _profileTabState extends State<profileTab> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      backgroundColor: Colors.grey[850],
       //appbar
       appBar: new AppBar(
         elevation: 0.0,
         centerTitle: true,
-        iconTheme: IconThemeData(color: Colors.black),
-        backgroundColor: Color(0xffeeeeee),
+        iconTheme: IconThemeData(color: Colors.white),
+        backgroundColor: Colors.grey[850],
         actions: [
           Align(
             alignment: Alignment.topRight,
@@ -70,7 +71,7 @@ class _profileTabState extends State<profileTab> {
       //body
       body: new Container(
           padding: new EdgeInsets.fromLTRB(20, 5, 20, 10),
-          color: Color(0xffeeeeee),
+          color: Colors.grey[850],
           child: ListView(
             children: <Widget>[
               //profile
@@ -86,18 +87,18 @@ class _profileTabState extends State<profileTab> {
               new Container(
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                    color: Colors.grey.shade100,
+                    color: Colors.grey[850],
                     borderRadius: BorderRadius.circular(6.0),
                     boxShadow: [
                       BoxShadow(
                         //bottom
-                        color: Colors.black.withOpacity(0.075),
+                        color: Colors.black54,
                         offset: Offset(5, 5),
                         blurRadius: 8,
                       ),
                       BoxShadow(
                         //top
-                        color: Colors.white,
+                        color: Colors.grey[800],
                         offset: Offset(-4, -4),
                         blurRadius: 6,
                       )
@@ -122,7 +123,7 @@ class _profileTabState extends State<profileTab> {
                                 color: Colors.cyan[200]))
                       ],
                     ),
-                    new IconButton(onPressed: () {print('allergies edit pressed');}, icon: Icon(Icons.edit, color: Colors.grey,))
+                    new IconButton(onPressed: () {print('allergies edit pressed');}, icon: Icon(Icons.edit, color: Colors.grey[200],))
                   ],
                 ),
               ),
@@ -133,18 +134,18 @@ class _profileTabState extends State<profileTab> {
               new Container(
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                    color: Colors.grey.shade100,
+                    color: Colors.grey[850],
                     borderRadius: BorderRadius.circular(6.0),
                     boxShadow: [
                       BoxShadow(
                         //bottom
-                        color: Colors.black.withOpacity(0.075),
+                        color: Colors.black54,
                         offset: Offset(5, 5),
                         blurRadius: 8,
                       ),
                       BoxShadow(
                         //top
-                        color: Colors.white,
+                        color: Colors.grey[800],
                         offset: Offset(-4, -4),
                         blurRadius: 6,
                       )
@@ -169,7 +170,7 @@ class _profileTabState extends State<profileTab> {
                                 color: Colors.cyan[200]))
                       ],
                     ),
-                    new IconButton(onPressed: () {print('preferences edit pressed');}, icon: Icon(Icons.edit, color: Colors.grey,))
+                    new IconButton(onPressed: () {print('preferences edit pressed');}, icon: Icon(Icons.edit, color: Colors.grey[200],))
                   ],
                 ),
               ),
@@ -180,18 +181,18 @@ class _profileTabState extends State<profileTab> {
               new Container(
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                    color: Colors.grey.shade100,
+                    color: Colors.grey[850],
                     borderRadius: BorderRadius.circular(6.0),
                     boxShadow: [
                       BoxShadow(
                         //bottom
-                        color: Colors.black.withOpacity(0.075),
+                        color: Colors.black54,
                         offset: Offset(5, 5),
                         blurRadius: 8,
                       ),
                       BoxShadow(
                         //top
-                        color: Colors.white,
+                        color: Colors.grey[800],
                         offset: Offset(-4, -4),
                         blurRadius: 6,
                       )
@@ -216,7 +217,7 @@ class _profileTabState extends State<profileTab> {
                                 color: Colors.cyan[200]))
                       ],
                     ),
-                    new IconButton(onPressed: () {print('clinical concerns edit pressed');}, icon: Icon(Icons.edit, color: Colors.grey,))
+                    new IconButton(onPressed: () {print('clinical concerns edit pressed');}, icon: Icon(Icons.edit, color: Colors.grey[200],))
                   ],
                 ),
               ),
@@ -227,18 +228,18 @@ class _profileTabState extends State<profileTab> {
               new Container(
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                    color: Colors.grey.shade100,
+                    color: Colors.grey[850],
                     borderRadius: BorderRadius.circular(6.0),
                     boxShadow: [
                       BoxShadow(
                         //bottom
-                        color: Colors.black.withOpacity(0.075),
+                        color: Colors.black54,
                         offset: Offset(5, 5),
                         blurRadius: 8,
                       ),
                       BoxShadow(
                         //top
-                        color: Colors.white,
+                        color: Colors.grey[800],
                         offset: Offset(-4, -4),
                         blurRadius: 6,
                       )
@@ -263,7 +264,7 @@ class _profileTabState extends State<profileTab> {
                                 color: Colors.cyan[200]))
                       ],
                     ),
-                    new IconButton(onPressed: () {print('choice of proteins edit pressed');}, icon: Icon(Icons.edit, color: Colors.grey,))
+                    new IconButton(onPressed: () {print('choice of proteins edit pressed');}, icon: Icon(Icons.edit, color: Colors.grey[200],))
                   ],
                 ),
               ),
@@ -274,18 +275,18 @@ class _profileTabState extends State<profileTab> {
               new Container(
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                    color: Colors.grey.shade100,
+                    color: Colors.grey[850],
                     borderRadius: BorderRadius.circular(6.0),
                     boxShadow: [
                       BoxShadow(
                         //bottom
-                        color: Colors.black.withOpacity(0.075),
+                        color: Colors.black54,
                         offset: Offset(5, 5),
                         blurRadius: 8,
                       ),
                       BoxShadow(
                         //top
-                        color: Colors.white,
+                        color: Colors.grey[800],
                         offset: Offset(-4, -4),
                         blurRadius: 6,
                       )
@@ -310,7 +311,7 @@ class _profileTabState extends State<profileTab> {
                                 color: Colors.cyan[200]))
                       ],
                     ),
-                    new IconButton(onPressed: () {print('cuisines edit pressed');}, icon: Icon(Icons.edit, color: Colors.grey,))
+                    new IconButton(onPressed: () {print('cuisines edit pressed');}, icon: Icon(Icons.edit, color: Colors.grey[200],))
                   ],
                 ),
               ),

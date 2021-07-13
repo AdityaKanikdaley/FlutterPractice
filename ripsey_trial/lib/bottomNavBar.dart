@@ -7,7 +7,7 @@ class bottomNavBar extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xffeeeeee),
+      color: Colors.grey[850],
       padding: EdgeInsets.fromLTRB(12, 0, 12, 20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -18,16 +18,16 @@ class bottomNavBar extends StatelessWidget{
             padding: EdgeInsets.all(2),
             width: 60, height: 63,
             decoration: BoxDecoration(
-                color: pageNumber == 1 ? Colors.blue[300] : Color(0xffeeeeee),
+                color: pageNumber == 1 ? Colors.blue[300] : Colors.grey[850],
                 borderRadius: BorderRadius.circular(6.0),
                 boxShadow: [
                   BoxShadow( //bottom
-                    color: Colors.black.withOpacity(0.26),
+                    color: Colors.black54,
                     offset: Offset(6, 6),
                     blurRadius: 10,
                   ),
                   BoxShadow( //top
-                    color: Colors.white,
+                    color: Colors.grey[800],
                     offset: Offset(-4, -4),
                     blurRadius: 6.0,
                   )
@@ -35,7 +35,7 @@ class bottomNavBar extends StatelessWidget{
             ),
             child: Container(
               decoration: BoxDecoration(
-                color: Color(0xffeeeeee),
+                color: Colors.grey[850],
                 borderRadius: BorderRadius.circular(5.0),
               ),
               child: TextButton(
@@ -59,16 +59,16 @@ class bottomNavBar extends StatelessWidget{
             padding: EdgeInsets.all(2),
             width: 60, height: 63,
             decoration: BoxDecoration(
-                color: pageNumber == 2 ? Colors.blue[300] : Color(0xffeeeeee),
+                color: pageNumber == 2 ? Colors.blue[300] : Colors.grey[850],
                 borderRadius: BorderRadius.circular(6.0),
                 boxShadow: [
                   BoxShadow( //bottom
-                    color: Colors.black.withOpacity(0.26),
+                    color: Colors.black54,
                     offset: Offset(6, 6),
                     blurRadius: 10,
                   ),
                   BoxShadow( //top
-                    color: Colors.white,
+                    color: Colors.grey[800],
                     offset: Offset(-4, -4),
                     blurRadius: 6.0,
                   )
@@ -76,7 +76,7 @@ class bottomNavBar extends StatelessWidget{
             ),
             child: Container(
               decoration: BoxDecoration(
-                color: Color(0xffeeeeee),
+                color: Colors.grey[850],
                 borderRadius: BorderRadius.circular(5.0),
               ),
               child: TextButton(
@@ -100,16 +100,16 @@ class bottomNavBar extends StatelessWidget{
             padding: EdgeInsets.all(2),
             width: 60, height: 63,
             decoration: BoxDecoration(
-                color: pageNumber == 3 ? Colors.blue[300] : Color(0xffeeeeee),
+                color: pageNumber == 3 ? Colors.blue[300] : Colors.grey[850],
                 borderRadius: BorderRadius.circular(6.0),
                 boxShadow: [
                   BoxShadow( //bottom
-                    color: Colors.black.withOpacity(0.26),
+                    color: Colors.black54,
                     offset: Offset(6, 6),
                     blurRadius: 10,
                   ),
                   BoxShadow( //top
-                    color: Colors.white,
+                    color: Colors.grey[800],
                     offset: Offset(-4, -4),
                     blurRadius: 6.0,
                   )
@@ -117,7 +117,7 @@ class bottomNavBar extends StatelessWidget{
             ),
             child: Container(
               decoration: BoxDecoration(
-                color: Color(0xffeeeeee),
+                color: Colors.grey[850],
                 borderRadius: BorderRadius.circular(5.0),
               ),
               child: TextButton(
@@ -141,16 +141,16 @@ class bottomNavBar extends StatelessWidget{
             padding: EdgeInsets.all(2),
             width: 60, height: 63,
             decoration: BoxDecoration(
-                color: pageNumber == 4 ? Colors.blue[300] : Color(0xffeeeeee),
+                color: pageNumber == 4 ? Colors.blue[300] : Colors.grey[850],
                 borderRadius: BorderRadius.circular(6.0),
                 boxShadow: [
                   BoxShadow( //bottom
-                    color: Colors.black.withOpacity(0.26),
+                    color: Colors.black54,
                     offset: Offset(6, 6),
                     blurRadius: 10,
                   ),
                   BoxShadow( //top
-                    color: Colors.white,
+                    color: Colors.grey[800],
                     offset: Offset(-4, -4),
                     blurRadius: 6.0,
                   )
@@ -158,7 +158,7 @@ class bottomNavBar extends StatelessWidget{
             ),
             child: Container(
               decoration: BoxDecoration(
-                color: Color(0xffeeeeee),
+                color: Colors.grey[850],
                 borderRadius: BorderRadius.circular(5.0),
               ),
               child: TextButton(
@@ -182,16 +182,16 @@ class bottomNavBar extends StatelessWidget{
             padding: EdgeInsets.all(2),
             width: 60, height: 63,
             decoration: BoxDecoration(
-                color: pageNumber == 5 ? Colors.blue[300] : Color(0xffeeeeee),
+                color: pageNumber == 5 ? Colors.blue[300] : Colors.grey[850],
                 borderRadius: BorderRadius.circular(6.0),
                 boxShadow: [
                   BoxShadow( //bottom
-                    color: Colors.black.withOpacity(0.26),
+                    color: Colors.black54,
                     offset: Offset(6, 6),
                     blurRadius: 10,
                   ),
                   BoxShadow( //top
-                    color: Colors.white,
+                    color: Colors.grey[800],
                     offset: Offset(-4, -4),
                     blurRadius: 6.0,
                   )
@@ -199,7 +199,7 @@ class bottomNavBar extends StatelessWidget{
             ),
             child: Container(
               decoration: BoxDecoration(
-                color: Color(0xffeeeeee),
+                color: Colors.grey[850],
                 borderRadius: BorderRadius.circular(5.0),
               ),
               child: TextButton(

@@ -11,12 +11,13 @@ class _weekTabState extends State<weekTab> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      backgroundColor: Colors.grey[850],
       //appbar
       appBar: new AppBar(
         elevation: 0.0,
         centerTitle: true,
-        iconTheme: IconThemeData(color: Colors.black),
-        backgroundColor: Color(0xffeeeeee),
+        iconTheme: IconThemeData(color: Colors.white),
+        backgroundColor: Colors.grey[850],
         // title: new Text('', style: TextStyle(color: Colors.blue[900]),),
       ),
 
@@ -31,7 +32,7 @@ class _weekTabState extends State<weekTab> {
       //body
       body: new Container(
           padding: new EdgeInsets.all(20),
-          color: Color(0xffeeeeee),
+          color: Colors.grey[850],
           child: ListView(
             children: <Widget>[
 
@@ -39,18 +40,18 @@ class _weekTabState extends State<weekTab> {
               new Container(
                 padding: EdgeInsets.all(1.5),
                 decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Colors.grey[850],
                     borderRadius: BorderRadius.circular(6.0),
                     boxShadow: [
                       BoxShadow(
                         //bottom
-                        color: Colors.black.withOpacity(0.3),
+                        color: Colors.black54,
                         offset: Offset(4, 4),
                         blurRadius: 6,
                       ),
                       BoxShadow(
                         //top
-                        color: Colors.white,
+                        color: Colors.grey[800],
                         offset: Offset(-4, -4),
                         blurRadius: 4,
                       )
@@ -79,18 +80,18 @@ class _weekTabState extends State<weekTab> {
                     width: 140,
                     height: 90,
                     decoration: BoxDecoration(
-                        color: Colors.grey.shade100,
+                        color: Colors.grey[850],
                         borderRadius: BorderRadius.circular(6.0),
                         boxShadow: [
                           BoxShadow(
                             //bottom
-                            color: Colors.black.withOpacity(0.075),
+                            color: Colors.black54,
                             offset: Offset(5, 5),
                             blurRadius: 8,
                           ),
                           BoxShadow(
                             //top
-                            color: Colors.white,
+                            color: Colors.grey[800],
                             offset: Offset(-4, -4),
                             blurRadius: 6,
                           )
@@ -107,18 +108,18 @@ class _weekTabState extends State<weekTab> {
                     width: 140,
                     height: 90,
                     decoration: BoxDecoration(
-                        color: Colors.grey.shade100,
+                        color: Colors.grey[850],
                         borderRadius: BorderRadius.circular(6.0),
                         boxShadow: [
                           BoxShadow(
                             //bottom
-                            color: Colors.black.withOpacity(0.075),
+                            color: Colors.black54,
                             offset: Offset(5, 5),
                             blurRadius: 8,
                           ),
                           BoxShadow(
                             //top
-                            color: Colors.white,
+                            color: Colors.grey[800],
                             offset: Offset(-4, -4),
                             blurRadius: 6,
                           )
@@ -143,18 +144,18 @@ class _weekTabState extends State<weekTab> {
                     width: 140,
                     height: 90,
                     decoration: BoxDecoration(
-                        color: Colors.grey.shade100,
+                        color: Colors.grey[850],
                         borderRadius: BorderRadius.circular(6.0),
                         boxShadow: [
                           BoxShadow(
                             //bottom
-                            color: Colors.black.withOpacity(0.075),
+                            color: Colors.black54,
                             offset: Offset(5, 5),
                             blurRadius: 8,
                           ),
                           BoxShadow(
                             //top
-                            color: Colors.white,
+                            color: Colors.grey[800],
                             offset: Offset(-4, -4),
                             blurRadius: 6,
                           )
@@ -171,18 +172,18 @@ class _weekTabState extends State<weekTab> {
                     width: 140,
                     height: 90,
                     decoration: BoxDecoration(
-                        color: Colors.grey.shade100,
+                        color: Colors.grey[850],
                         borderRadius: BorderRadius.circular(6.0),
                         boxShadow: [
                           BoxShadow(
                             //bottom
-                            color: Colors.black.withOpacity(0.075),
+                            color: Colors.black54,
                             offset: Offset(5, 5),
                             blurRadius: 8,
                           ),
                           BoxShadow(
                             //top
-                            color: Colors.white,
+                            color: Colors.grey[800],
                             offset: Offset(-4, -4),
                             blurRadius: 6,
                           )
@@ -207,18 +208,18 @@ class _weekTabState extends State<weekTab> {
                     width: 140,
                     height: 90,
                     decoration: BoxDecoration(
-                        color: Colors.grey.shade100,
+                        color: Colors.grey[850],
                         borderRadius: BorderRadius.circular(6.0),
                         boxShadow: [
                           BoxShadow(
                             //bottom
-                            color: Colors.black.withOpacity(0.075),
+                            color: Colors.black54,
                             offset: Offset(5, 5),
                             blurRadius: 8,
                           ),
                           BoxShadow(
                             //top
-                            color: Colors.white,
+                            color: Colors.grey[800],
                             offset: Offset(-4, -4),
                             blurRadius: 6,
                           )
@@ -235,18 +236,18 @@ class _weekTabState extends State<weekTab> {
                     width: 140,
                     height: 90,
                     decoration: BoxDecoration(
-                        color: Colors.grey.shade100,
+                        color: Colors.grey[850],
                         borderRadius: BorderRadius.circular(6.0),
                         boxShadow: [
                           BoxShadow(
                             //bottom
-                            color: Colors.black.withOpacity(0.075),
+                            color: Colors.black54,
                             offset: Offset(5, 5),
                             blurRadius: 8,
                           ),
                           BoxShadow(
                             //top
-                            color: Colors.white,
+                            color: Colors.grey[800],
                             offset: Offset(-4, -4),
                             blurRadius: 6,
                           )
@@ -271,18 +272,18 @@ class _weekTabState extends State<weekTab> {
                     width: 140,
                     height: 90,
                     decoration: BoxDecoration(
-                        color: Colors.grey.shade100,
+                        color: Colors.grey[850],
                         borderRadius: BorderRadius.circular(6.0),
                         boxShadow: [
                           BoxShadow(
                             //bottom
-                            color: Colors.black.withOpacity(0.075),
+                            color: Colors.black54,
                             offset: Offset(5, 5),
                             blurRadius: 8,
                           ),
                           BoxShadow(
                             //top
-                            color: Colors.white,
+                            color: Colors.grey[800],
                             offset: Offset(-4, -4),
                             blurRadius: 6,
                           )

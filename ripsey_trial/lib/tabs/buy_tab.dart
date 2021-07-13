@@ -12,13 +12,14 @@ class _buyTabState extends State<buyTab> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      backgroundColor: Colors.grey[850],
 
       //appbar
       appBar: new AppBar(
         elevation: 0.0,
         centerTitle: true,
-        iconTheme: IconThemeData(color: Colors.black),
-        backgroundColor: Color(0xffeeeeee),
+        iconTheme: IconThemeData(color: Colors.white),
+        backgroundColor: Colors.grey[850],
         // title: new Text('', style: TextStyle(color: Colors.blue[900]),),
       ),
 
@@ -33,7 +34,7 @@ class _buyTabState extends State<buyTab> {
       //body
       body: new Container(
           padding: new EdgeInsets.fromLTRB(20, 5, 20, 10),
-          color: Color(0xffeeeeee),
+          color: Colors.grey[850],
           child: ListView(
             children: <Widget>[
 
@@ -57,18 +58,18 @@ class _buyTabState extends State<buyTab> {
                       width: 150,
                       height: 180,
                       decoration: BoxDecoration(
-                          color: Colors.grey.shade100,
+                          color: Colors.grey[850],
                           borderRadius: BorderRadius.circular(6.0),
                           boxShadow: [
                             BoxShadow(
                               //bottom
-                              color: Colors.black.withOpacity(0.075),
+                              color: Colors.black54,
                               offset: Offset(5, 5),
                               blurRadius: 8,
                             ),
                             BoxShadow(
                               //top
-                              color: Colors.white,
+                              color: Colors.grey[800],
                               offset: Offset(-4, -4),
                               blurRadius: 6,
                             )
@@ -83,24 +84,24 @@ class _buyTabState extends State<buyTab> {
                     child: new Container(
                       width: 150,
                       height: 180,
+                      child: Center(child: Text("DNA test", style: TextStyle(color: Colors.blue[800], fontSize: 14, fontWeight: FontWeight.bold),)),
                       decoration: BoxDecoration(
-                          color: Colors.grey.shade100,
+                          color: Colors.grey[850],
                           borderRadius: BorderRadius.circular(6.0),
                           boxShadow: [
                             BoxShadow(
                               //bottom
-                              color: Colors.black.withOpacity(0.075),
+                              color: Colors.black54,
                               offset: Offset(5, 5),
                               blurRadius: 8,
                             ),
                             BoxShadow(
                               //top
-                              color: Colors.white,
+                              color: Colors.grey[800],
                               offset: Offset(-4, -4),
                               blurRadius: 6,
                             )
                           ]),
-                      child: Center(child: Text("DNA test", style: TextStyle(color: Colors.blue[800], fontSize: 14, fontWeight: FontWeight.bold),)),
                     ),
                   ),
                 ],
@@ -119,18 +120,18 @@ class _buyTabState extends State<buyTab> {
                       width: 150,
                       height: 180,
                       decoration: BoxDecoration(
-                          color: Colors.grey.shade100,
+                          color: Colors.grey[850],
                           borderRadius: BorderRadius.circular(6.0),
                           boxShadow: [
                             BoxShadow(
                               //bottom
-                              color: Colors.black.withOpacity(0.075),
+                              color: Colors.black54,
                               offset: Offset(5, 5),
                               blurRadius: 8,
                             ),
                             BoxShadow(
                               //top
-                              color: Colors.white,
+                              color: Colors.grey[800],
                               offset: Offset(-4, -4),
                               blurRadius: 6,
                             )
@@ -146,18 +147,18 @@ class _buyTabState extends State<buyTab> {
                       width: 150,
                       height: 180,
                       decoration: BoxDecoration(
-                          color: Colors.grey.shade100,
+                          color: Colors.grey[850],
                           borderRadius: BorderRadius.circular(6.0),
                           boxShadow: [
                             BoxShadow(
                               //bottom
-                              color: Colors.black.withOpacity(0.075),
+                              color: Colors.black54,
                               offset: Offset(5, 5),
                               blurRadius: 8,
                             ),
                             BoxShadow(
                               //top
-                              color: Colors.white,
+                              color: Colors.grey[800],
                               offset: Offset(-4, -4),
                               blurRadius: 6,
                             )
