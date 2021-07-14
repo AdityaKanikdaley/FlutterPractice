@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_signIn/api/google_signIn_api.dart';
-import 'package:google_signIn/main.dart';
+import 'package:google_SignIn/api/google_signIn_api.dart';
+import 'package:google_SignIn/main.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class LoggedInPage extends StatelessWidget {

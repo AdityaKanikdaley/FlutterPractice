@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_signIn/api/google_signIn_api.dart';
-import 'package:google_signIn/page/logged_in_page.dart';
+import 'package:google_SignIn/api/google_signIn_api.dart';
+import 'package:google_SignIn/page/logged_in_page.dart';
 
 void main() {
   runApp(new MaterialApp(
@@ -31,7 +31,7 @@ class _State extends State<MyApp> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Name here'),
+        title: new Text('Google Sign-In'),
       ),
       body: new Container(
         padding: new EdgeInsets.all(32.0),
@@ -42,7 +42,7 @@ class _State extends State<MyApp> {
                   primary: Colors.white,
                   onPrimary: Colors.black,
                   minimumSize: Size(double.infinity, 50)),
-              icon: Icon(Icons.gavel_outlined),
+              icon: Image.asset('assets/google_icon.png', width: 20, height: 20),
               label: Text('Sign Up with Google'),
               onPressed: signIn,
             )
